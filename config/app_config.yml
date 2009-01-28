@@ -1,0 +1,9 @@
+development:
+  domain: localhost:3000
+  username: foo
+  password: bar
+test:
+  domain: test.host
+
+production:
+  domain: example.com

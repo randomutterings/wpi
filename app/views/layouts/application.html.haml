@@ -1,0 +1,31 @@
+!!! Strict
+%html{html_attrs}
+  
+  %head
+    %title
+      = h(yield(:title) || "Untitled")
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    = stylesheet_link_tag 'application'
+    = yield(:head)
+  
+  %body
+    #container
+      %div#header
+      
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+      
+      %div#sidebar
+        =image_tag("/images/logo.gif")
+        
+        %br
+        %br
+        %div.menu=link_to "HOME", static_path("home")
+        
+        - @pages = Page.find(:all).each do |page|
+          %div.menu=link_to page.name, static_path(page.permalink) unless page.permalink == "home"
+          
+      %div#main
+        = yield
+        
+      %div#footer

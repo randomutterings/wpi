@@ -1,0 +1,9 @@
+- title "Pages"
+
+- for page in @pages
+  %div
+    = link_to page.name, page.permalink
+    = link_to 'Edit', edit_page_path(page) if session[:is_authenticated] == true
+    = link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete if session[:is_authenticated] == true
+
+%p= link_to "New Page", new_page_path if session[:is_authenticated] == true
