@@ -1,0 +1,59 @@
+- title "Agent"
+
+%p
+  = image_tag(@agent.photo.url(:medium))
+%p
+  %strong First Name:
+  =h @agent.first_name
+%p
+  %strong Last Name:
+  =h @agent.last_name
+%p
+  %strong Address1:
+  =h @agent.address1
+%p
+  %strong Address2:
+  =h @agent.address2
+%p
+  %strong City:
+  =h @agent.city
+%p
+  %strong State:
+  =h @agent.state
+%p
+  %strong Zip:
+  =h @agent.zip
+%p
+  %strong County:
+  =h @agent.county
+%p
+  %strong Phone:
+  =h @agent.phone
+%p
+  %strong Fax:
+  =h @agent.fax
+%p
+  %strong Tollfree:
+  =h @agent.tollfree
+%p
+  %strong Email:
+  =h @agent.email
+%p
+  %strong Description:
+  = simple_format @agent.description
+%p
+  %strong Permalink:
+  =h @agent.permalink
+%p
+  %strong Idx Url:
+  =h @agent.idx_url
+%p
+  %strong Active:
+  =h @agent.active
+
+%p
+  = link_to "Edit", edit_agent_path(@agent)
+  |
+  = link_to "Destroy", @agent, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", agents_path

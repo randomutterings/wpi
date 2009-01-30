@@ -1,0 +1,35 @@
+one:
+  first_name: MyString
+  last_name: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  county: MyString
+  phone: MyString
+  fax: MyString
+  tollfree: MyString
+  email: MyString
+  description: MyText
+  permalink: MyString
+  idx_url: MyString
+  active: false
+
+two:
+  first_name: MyString
+  last_name: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  county: MyString
+  phone: MyString
+  fax: MyString
+  tollfree: MyString
+  email: MyString
+  description: MyText
+  permalink: MyString
+  idx_url: MyString
+  active: false

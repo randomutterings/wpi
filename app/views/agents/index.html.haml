@@ -1,0 +1,43 @@
+- title "Agents"
+
+%table
+  %tr
+    %th First name
+    %th Last name
+    %th Address1
+    %th Address2
+    %th City
+    %th State
+    %th Zip
+    %th County
+    %th Phone
+    %th Fax
+    %th Tollfree
+    %th Email
+    %th Description
+    %th Permalink
+    %th Idx url
+    %th Active
+  - for agent in @agents
+    %tr
+      %td= h agent.first_name
+      %td= h agent.last_name
+      %td= h agent.address1
+      %td= h agent.address2
+      %td= h agent.city
+      %td= h agent.state
+      %td= h agent.zip
+      %td= h agent.county
+      %td= h agent.phone
+      %td= h agent.fax
+      %td= h agent.tollfree
+      %td= h agent.email
+      %td= h agent.description
+      %td= h agent.permalink
+      %td= h agent.idx_url
+      %td= h agent.active
+      %td= link_to 'Show', agent
+      %td= link_to 'Edit', edit_agent_path(agent)
+      %td= link_to 'Destroy', agent, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Agent", new_agent_path

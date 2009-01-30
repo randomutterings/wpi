@@ -1,0 +1,73 @@
+- form_for @agent, :html => { :multipart => true } do |f|
+
+  = f.error_messages
+  %p
+    = f.label :first_name
+    %br
+    = f.text_field :first_name
+  %p
+    = f.label :last_name
+    %br
+    = f.text_field :last_name
+  %p
+    = f.label :address1
+    %br
+    = f.text_field :address1
+  %p
+    = f.label :address2
+    %br
+    = f.text_field :address2
+  %p
+    = f.label :city
+    %br
+    = f.text_field :city
+  %p
+    = f.label :state
+    %br
+    = f.text_field :state
+  %p
+    = f.label :zip
+    %br
+    = f.text_field :zip
+  %p
+    = f.label :county
+    %br
+    = f.text_field :county
+  %p
+    = f.label :phone
+    %br
+    = f.text_field :phone
+  %p
+    = f.label :fax
+    %br
+    = f.text_field :fax
+  %p
+    = f.label :tollfree
+    %br
+    = f.text_field :tollfree
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :permalink
+    %br
+    = f.text_field :permalink
+  %p
+    = f.label :idx_url
+    %br
+    = f.text_field :idx_url
+  %p
+    = f.label :active
+    %br
+    = f.check_box :active
+  %p
+    = f.label :photo
+    %br
+    = f.file_field :photo
+  %p
+    = f.submit "Submit"
