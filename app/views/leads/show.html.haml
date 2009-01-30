@@ -1,0 +1,57 @@
+- title "Lead"
+
+%p
+  %strong Type:
+  =h @lead.lead_type.name unless @lead.lead_type_id.nil?
+%p
+  %strong Name:
+  =h @lead.name
+%p
+  %strong Spouse Name:
+  =h @lead.spouse_name
+%p
+  %strong Email:
+  =link_to @lead.email, "mailto:#{@lead.email}"
+%p
+  %strong Phone1:
+  =h @lead.phone1
+%p
+  %strong Phone2:
+  =h @lead.phone2
+%p
+  %strong Fax:
+  =h @lead.fax
+%p
+  %strong Age:
+  =h @lead.age
+%p
+  %strong Address:
+  =h @lead.address
+%p
+  %strong City:
+  =h @lead.city
+%p
+  %strong State:
+  =h @lead.state
+%p
+  %strong Zip:
+  =h @lead.zip
+%p
+  %strong Country:
+  =h @lead.country
+%p
+  %strong Comments:
+  =h @lead.comments
+%p
+  %strong Referral Type:
+  =h @lead.lead_referral_type.name unless @lead.lead_referral_type_id.nil?
+%p
+  %strong Status:
+  =h @lead.lead_status.name unless @lead.lead_status_id.nil?
+
+%p
+  = link_to "Edit", edit_lead_path(@lead)
+  |
+  = link_to "Destroy", @lead, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", leads_path

@@ -1,0 +1,35 @@
+one:
+  lead_type_id: 1
+  name: MyString
+  spouse_name: MyString
+  email: MyString
+  phone1: MyString
+  phone2: MyString
+  fax: MyString
+  age: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  country: MyString
+  comments: MyText
+  lead_referral_type_id: 1
+  lead_status_id: 1
+
+two:
+  lead_type_id: 1
+  name: MyString
+  spouse_name: MyString
+  email: MyString
+  phone1: MyString
+  phone2: MyString
+  fax: MyString
+  age: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  country: MyString
+  comments: MyText
+  lead_referral_type_id: 1
+  lead_status_id: 1

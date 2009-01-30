@@ -1,0 +1,12 @@
+- title "Lead Type"
+
+%p
+  %strong Name:
+  =h @lead_type.name
+
+%p
+  = link_to "Edit", edit_lead_type_path(@lead_type)
+  |
+  = link_to "Destroy", @lead_type, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", lead_types_path

@@ -1,0 +1,77 @@
+- form_for @lead do |f|
+  = f.error_messages
+  %p
+    = f.label :lead_type_id
+    %br
+    = f.collection_select :lead_type_id, LeadType.all, :id, :name, :prompt => true
+    Or enter a new one
+    %br
+    = f.text_field :lead_type_name
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :spouse_name
+    %br
+    = f.text_field :spouse_name
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :phone1
+    %br
+    = f.text_field :phone1
+  %p
+    = f.label :phone2
+    %br
+    = f.text_field :phone2
+  %p
+    = f.label :fax
+    %br
+    = f.text_field :fax
+  %p
+    = f.label :age
+    %br
+    = f.text_field :age
+  %p
+    = f.label :address
+    %br
+    = f.text_field :address
+  %p
+    = f.label :city
+    %br
+    = f.text_field :city
+  %p
+    = f.label :state
+    %br
+    = f.state_select :state, country='US', :prompt => true
+  %p
+    = f.label :zip
+    %br
+    = f.text_field :zip
+  %p
+    = f.label :country
+    %br
+    = f.country_select :country, ["United States"]
+  %p
+    = f.label :comments
+    %br
+    = f.text_area :comments
+  %p
+    = f.label :lead_referral_type
+    %br
+    = f.collection_select :lead_referral_type_id, LeadReferralType.all, :id, :name, :prompt => true
+    Or enter a new one
+    %br
+    = f.text_field :lead_referral_type_name
+  %p
+    = f.label :lead_status_type
+    %br
+    = f.collection_select :lead_status_id, LeadStatus.all, :id, :name, :prompt => true
+    Or enter a new one
+    %br
+    = f.text_field :lead_status_name
+  %p
+    = f.submit "Submit"

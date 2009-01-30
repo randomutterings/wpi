@@ -1,0 +1,13 @@
+- title "Lead Types"
+
+%table
+  %tr
+    %th Name
+  - for lead_type in @lead_types
+    %tr
+      %td= h lead_type.name
+      %td= link_to 'Show', lead_type
+      %td= link_to 'Edit', edit_lead_type_path(lead_type)
+      %td= link_to 'Destroy', lead_type, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Lead Type", new_lead_type_path

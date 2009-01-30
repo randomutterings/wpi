@@ -10,3 +10,9 @@
 [submodule "vendor/plugins/paperclip"]
 	path = vendor/plugins/paperclip
 	url = git://github.com/thoughtbot/paperclip.git
+[submodule "vendor/plugins/country_select"]
+	path = vendor/plugins/country_select
+	url = git://github.com/rails/country_select.git
+[submodule "vendor/plugins/stateselect"]
+	path = vendor/plugins/stateselect
+	url = git://github.com/bansalakhil/stateselect.git

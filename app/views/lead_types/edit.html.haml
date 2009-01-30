@@ -1,0 +1,8 @@
+- title "Edit Lead Type"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Edit", edit_lead_type_path(@lead_type)
+  |
+  = link_to "View All", lead_types_path

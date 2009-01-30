@@ -1,0 +1,21 @@
+- title "Leads"
+
+%table
+  %tr
+    %th Type
+    %th Name
+    %th Email
+    %th Phone1
+    %th Status
+  - for lead in @leads
+    %tr
+      %td= h lead.lead_type.name unless lead.lead_type.nil?
+      %td= h lead.name
+      %td= link_to lead.email, "mailto:#{lead.email}"
+      %td= h lead.phone1
+      %td= h lead.lead_status.name unless lead.lead_status.nil?
+      %td= link_to 'Show', lead
+      %td= link_to 'Edit', edit_lead_path(lead)
+      %td= link_to 'Destroy', lead, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Lead", new_lead_path

@@ -1,0 +1,12 @@
+- title "Lead Status"
+
+%p
+  %strong Name:
+  =h @lead_status.name
+
+%p
+  = link_to "Edit", edit_lead_status_path(@lead_status)
+  |
+  = link_to "Destroy", @lead_status, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", lead_statuses_path

@@ -21,7 +21,8 @@ a {
   float: left; }
 
 #main {
-  float: right; }
+  float: right;
+  width: 90%; }
 
 #container {
   width: 75%;

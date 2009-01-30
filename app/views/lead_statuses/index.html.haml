@@ -1,0 +1,13 @@
+- title "Lead Statuses"
+
+%table
+  %tr
+    %th Name
+  - for lead_status in @lead_statuses
+    %tr
+      %td= h lead_status.name
+      %td= link_to 'Show', lead_status
+      %td= link_to 'Edit', edit_lead_status_path(lead_status)
+      %td= link_to 'Destroy', lead_status, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Lead Status", new_lead_status_path

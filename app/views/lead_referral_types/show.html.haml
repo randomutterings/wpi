@@ -1,0 +1,12 @@
+- title "Lead Referral Type"
+
+%p
+  %strong Name:
+  =h @lead_referral_type.name
+
+%p
+  = link_to "Edit", edit_lead_referral_type_path(@lead_referral_type)
+  |
+  = link_to "Destroy", @lead_referral_type, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", lead_referral_types_path

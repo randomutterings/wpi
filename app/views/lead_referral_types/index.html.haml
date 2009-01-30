@@ -1,0 +1,13 @@
+- title "Lead Referral Types"
+
+%table
+  %tr
+    %th Name
+  - for lead_referral_type in @lead_referral_types
+    %tr
+      %td= h lead_referral_type.name
+      %td= link_to 'Show', lead_referral_type
+      %td= link_to 'Edit', edit_lead_referral_type_path(lead_referral_type)
+      %td= link_to 'Destroy', lead_referral_type, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Lead Referral Type", new_lead_referral_type_path
