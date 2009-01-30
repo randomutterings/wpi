@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pages
 
-  map.root :controller => "agents", :action => "show", :permalink => "jend"
+  map.root :controller => "pages", :action => "show"
   
   map.static 'pages/:permalink', :controller => 'pages', :action => 'show'
   

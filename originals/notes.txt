@@ -1,4 +1,5 @@
 agents
+contact manager
 listings (show with contact, tell a friend, view map, mortgage calculator, print)
 about the agent (description from agent model and contact form)
 file manager with access permissions
@@ -7,7 +8,6 @@ find a home
 spotlights (flash houses with link to view all)
 news (flash news)
 showings and open houses on calendar
-contact manager
 whats your home worth (creates home model with status inquired about value)
 
 local listings (different site idx link)
