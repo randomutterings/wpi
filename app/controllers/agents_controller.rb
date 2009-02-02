@@ -5,7 +5,11 @@ class AgentsController < ApplicationController
   
   def show
     if params[:permalink].nil?
-      @agent = Agent.find(params[:id])
+      if params[:id].nil?
+        @agent = Agent.find(session[:agent])
+      else
+        @agent = Agent.find(params[:id])
+      end
     else
       @agent = Agent.find_by_permalink!(params[:permalink])
     end

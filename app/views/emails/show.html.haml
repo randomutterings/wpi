@@ -1,0 +1,19 @@
+- title "Email"
+
+%p
+  %strong From:
+  =h @email.from
+%p
+  %strong To:
+  =h @email.to
+%p
+  %strong Subject:
+  =h @email.subject
+%p
+  %strong Body:
+  =h @email.body
+
+%p
+  = link_to "Destroy", @email, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", emails_path

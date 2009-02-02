@@ -1,0 +1,16 @@
+- title "Emails"
+
+%table
+  %tr
+    %th From
+    %th To
+    %th Subject
+  - for email in @emails
+    %tr
+      %td= h email.from
+      %td= h email.to
+      %td= h email.subject
+      %td= link_to 'Show', email
+      %td= link_to 'Destroy', email, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Email", new_email_path

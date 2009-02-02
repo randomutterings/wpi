@@ -1,0 +1,9 @@
+one:
+  to: MyString
+  subject: MyString
+  body: MyText
+
+two:
+  to: MyString
+  subject: MyString
+  body: MyText

@@ -13,6 +13,10 @@ a {
   height: 0;
   overflow: hidden; }
 
+.instructions {
+  font-size: 12px;
+  font-style: italic; }
+
 
 #footer {
   clear: both; }

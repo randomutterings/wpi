@@ -46,4 +46,9 @@ class Lead < ActiveRecord::Base
       self.lead_type_id = lead_type.id
     end
   end
+  
+  def email_with_name
+    "#{self.name} <#{self.email}>"
+  end
+  
 end

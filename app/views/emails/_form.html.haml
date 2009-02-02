@@ -1,0 +1,16 @@
+- form_for @email do |f|
+  = f.error_messages
+  %p
+    = f.label :to, "To <span class='instructions'>(Hold down ctrl to select multiple leads.)</span>"
+    %br
+    = f.collection_select(:to, Lead.all, :email_with_name, :email_with_name, {:selected => params[:email_ids]}, :multiple => true)
+  %p
+    = f.label :subject
+    %br
+    = f.text_field :subject
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+  %p
+    = f.submit "Submit"
