@@ -1,0 +1,150 @@
+- form_for @listing do |f|
+  = f.error_messages
+  %table{:cellspacing => "10", :cellpadding => "5"}
+    %tr
+      %td
+        = f.label :lead_id
+        .instructions= "Select a lead from the contact manager who is the owner of this property or #{link_to 'add&nbsp;a&nbsp;new&nbsp;lead', new_lead_url}."
+      %td= f.collection_select :lead_id, Lead.all, :id, :name
+    %tr
+      %td
+        = f.label :title
+        .instructions You can give this listing a title.  What is the first thing you would like your visitors to read about this item?
+      %td= f.text_field :title
+    %tr
+      %td
+        = f.label :permalink
+        .instructions="(Optional) Listing permalinks replicate at #{APP_CONFIG[:domain]}/listing/:permalink.  For example if your permalink is beach_house, the url for this listing will be #{APP_CONFIG[:domain]}/listing/beach_house."
+      %td= f.text_field :permalink
+    %tr
+      %td
+        = f.label :featured
+        .instructions Put a check here to have this listing featured on the home page.
+      %td= f.check_box :featured
+    %tr
+      %td
+        = f.label :status_id
+        .instructions If an appropriate status isn't available, enter a new one
+      %td
+        = f.collection_select :status_id, Status.all, :id, :name
+        or
+        = f.text_field :status_name
+    %tr
+      %td
+        = f.label :display
+        .instructions Put a check here to have this listing displayed to the public.
+      %td= f.check_box :display
+    %tr
+      %td= f.label :price
+      %td= f.text_field :price
+    %tr
+      %td
+        = f.label :description
+        .instructions Type a short description of the property here. (In paragraph form.)
+      %td= f.text_area :description
+    %tr
+      %td= f.label :address
+      %td= f.text_field :address
+    %tr
+      %td= f.label :city
+      %td= f.text_field :city
+    %tr
+      %td= f.label :state
+      %td= f.text_field :state
+    %tr
+      %td= f.label :zip
+      %td= f.text_field :zip
+    %tr
+      %td= f.label :county
+      %td= f.text_field :county
+    %tr
+      %td= f.label :mls
+      %td= f.text_field :mls
+    %tr
+      %td= f.label :property_taxes
+      %td= f.text_field :property_taxes
+    %tr
+      %td= f.label :frontage
+      %td= f.text_field :frontage
+    %tr
+      %td= f.label :depth
+      %td= f.text_field :depth
+    %tr
+      %td= f.label :lot_area
+      %td= f.text_field :lot_area
+    %tr
+      %td
+        = f.label :finished_area
+        .instructions (House/Building size)
+      %td= f.text_field :finished_area
+    %tr
+      %td= f.label :year_built
+      %td= f.text_field :year_built
+    %tr
+      %td= f.label :bedrooms
+      %td= f.text_field :bedrooms
+    %tr
+      %td= f.label :bathrooms
+      %td= f.text_field :bathrooms
+    %tr
+      %td= f.label :furnished
+      %td= f.check_box :furnished
+    %tr
+      %td= f.label :garage
+      %td= f.text_field :garage
+    %tr
+      %td
+        = f.label :basement
+        .instructions It is helpful to know perhaps what types of rooms are in the basement: (i.e. laundry, storage, bedrooms, etc.) Is it "dry". Has the basement has been finished and whether it is a full, three-quarter, or walk-out basement.
+      %td= f.text_area :basement
+    %tr
+      %td
+        = f.label :space_details
+        .instructions
+          Here you can describe the rooms
+          in more detail. For example:
+          %br
+          %br
+          Main Level Master Bedroom (16
+          x 18), 2 full baths, half-bath in
+          basement, vaulted ceilings,
+          two-car garage.
+          %br
+          %br
+          OR Underground parking, 10 x
+          12 office cubicles, etc.
+      %td= f.text_area :space_details
+    %tr
+      %td
+        = f.label :construction_details
+        .instructions
+          Example:
+          %br
+          %br
+          Steel Studded inner walls, Straw
+          Bale outer walls, clay shakes,
+          hardwood flooring.
+      %td= f.text_area :construction_details
+    %tr
+      %td
+        = f.label :features
+        .instructions
+          Example:
+          %br
+          %br
+          Two fireplaces (one in master
+          bedroom), large backyard with
+          fence and storage shed, view of
+          golf course, cul-de-sac.
+      %td= f.text_area :features
+    %tr
+      %td
+        = f.label :sales_notes
+        .instructions
+          Municipal charges include power,
+          water, gas and sewer.
+          Refrigerator, oven and
+          dishwasher included.
+      %td= f.text_area :sales_notes
+    %tr
+      %td= f.submit "Submit"

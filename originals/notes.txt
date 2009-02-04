@@ -5,7 +5,7 @@ about the agent (description from agent model and contact form)
 file manager with access permissions
 buying and selling (auto responder with attachments)
 find a home
-spotlights (flash houses with link to view all)
+featured listings (flash houses with link to view all)
 news (flash news)
 showings and open houses on calendar
 whats your home worth (creates home model with status inquired about value)

@@ -1,0 +1,8 @@
+- title "Edit Status"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Edit", edit_status_path(@status)
+  |
+  = link_to "View All", statuses_path

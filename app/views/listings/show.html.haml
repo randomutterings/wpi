@@ -1,0 +1,96 @@
+- title "Listing"
+
+%p
+  %strong Lead:
+  =h @listing.lead_id
+%p
+  %strong Title:
+  =h @listing.title
+%p
+  %strong Permalink:
+  =h @listing.permalink
+%p
+  %strong Featured:
+  =h @listing.featured
+%p
+  %strong Status:
+  =h @listing.status_id
+%p
+  %strong Display:
+  =h @listing.display
+%p
+  %strong Price:
+  =h @listing.price
+%p
+  %strong Description:
+  =h @listing.description
+%p
+  %strong Address:
+  =h @listing.address
+%p
+  %strong City:
+  =h @listing.city
+%p
+  %strong State:
+  =h @listing.state
+%p
+  %strong Zip:
+  =h @listing.zip
+%p
+  %strong County:
+  =h @listing.county
+%p
+  %strong Mls:
+  =h @listing.mls
+%p
+  %strong Property Taxes:
+  =h @listing.property_taxes
+%p
+  %strong Frontage:
+  =h @listing.frontage
+%p
+  %strong Depth:
+  =h @listing.depth
+%p
+  %strong Lot Area:
+  =h @listing.lot_area
+%p
+  %strong Finished Area:
+  =h @listing.finished_area
+%p
+  %strong Year Built:
+  =h @listing.year_built
+%p
+  %strong Bedrooms:
+  =h @listing.bedrooms
+%p
+  %strong Bathrooms:
+  =h @listing.bathrooms
+%p
+  %strong Furnished:
+  =h @listing.furnished
+%p
+  %strong Garage:
+  =h @listing.garage
+%p
+  %strong Basement:
+  =h @listing.basement
+%p
+  %strong Space Details:
+  =h @listing.space_details
+%p
+  %strong Construction Details:
+  =h @listing.construction_details
+%p
+  %strong Features:
+  =h @listing.features
+%p
+  %strong Sales Notes:
+  =h @listing.sales_notes
+
+%p
+  = link_to "Edit", edit_listing_path(@listing)
+  |
+  = link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", listings_path

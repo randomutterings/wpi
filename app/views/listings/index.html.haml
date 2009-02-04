@@ -1,0 +1,23 @@
+- title "Listings"
+
+%table
+  %tr
+    %th Title
+    %th Price
+    %th City
+    %th State
+    %th Bedrooms
+    %th Bathrooms
+  - for listing in @listings
+    %tr
+      %td= h listing.title
+      %td= h listing.price
+      %td= h listing.city
+      %td= h listing.state
+      %td= h listing.bedrooms
+      %td= h listing.bathrooms
+      %td= link_to 'Show', listing
+      %td= link_to 'Edit', edit_listing_path(listing)
+      %td= link_to 'Destroy', listing, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Listing", new_listing_path

@@ -1,11 +1,11 @@
 development:
-  domain: localhost:3000
+  domain: http://wpi.local
   username: foo
   password: bar
 test:
-  domain: test.host
+  domain: http://wpi.local
 
 production:
-  domain: example.com
+  domain: http://www.wpi-properties.com
   username: foo
   password: bar

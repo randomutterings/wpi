@@ -1,0 +1,12 @@
+- title "Status"
+
+%p
+  %strong Name:
+  =h @status.name
+
+%p
+  = link_to "Edit", edit_status_path(@status)
+  |
+  = link_to "Destroy", @status, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", statuses_path

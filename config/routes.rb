@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :statuses
+
+  map.resources :listings
+  
   map.resources :emails
 
   map.resources :leads
@@ -15,7 +19,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "pages", :action => "show"
   
-  map.static 'pages/:permalink', :controller => 'pages', :action => 'show'
+  map.page 'page/:permalink', :controller => 'pages', :action => 'show'
   
-  map.static ':agent', :controller => 'agents', :action => "show"
+  map.agent 'agent/:permalink', :controller => 'agents', :action => "show"
+  
+  map.listing 'listing/:permalink', :controller => 'listings', :action => "show"
+  
 end

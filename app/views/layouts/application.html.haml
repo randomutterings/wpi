@@ -9,23 +9,24 @@
     = yield(:head)
   
   %body
-    #container
-      %div#header
-      
+    #site
+      #header
+        =image_tag("/images/logo.png")
+
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       
-      %div#sidebar
-        =image_tag("/images/logo.gif")
+      #container
+        #sidebar
+          .menu=link_to "HOME", page_path("home")
+          .menu=link_to "Listings", listings_url
         
-        %br
-        %br
-        %div.menu=link_to "HOME", static_path("home")
-        
-        - @pages = Page.find(:all).each do |page|
-          %div.menu=link_to page.name, static_path(page.permalink) unless page.permalink == "home"
+          - @pages = Page.find(:all).each do |page|
+            %div.menu=link_to page.name, page_path(page.permalink) unless page.permalink == "home"
           
-      %div#main
-        = yield
+        #main
+          = yield
         
-      %div#footer
+        #container_footer
+        
+      #footer
