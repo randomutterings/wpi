@@ -7,3 +7,5 @@ test:
 
 production:
   domain: example.com
+  username: foo
+  password: bar

@@ -14,9 +14,9 @@ class EmailsController < ApplicationController
   def create
     @email = Email.new(params[:email])
     @email.from = Agent.find(session[:agent]).email_with_name
-    if Notifier.deliver_lead_email(@email.from, @email.to, @email.subject, @email.body)
-      @email.to = @email.to.join(", ")
-      if @email.save
+    @email.to = @email.to.join(", ") unless @email.to.nil?
+    if @email.save
+      if Notifier.deliver_lead_email(@email.from, params[:email][:to], @email.subject, @email.body)
         flash[:notice] = "Successfully created email."
         redirect_to @email
       else
