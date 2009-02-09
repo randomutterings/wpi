@@ -145,9 +145,19 @@
           water, gas and sewer.
           Refrigerator, oven and
           dishwasher included.
-      %td= f.text_area :sales_notes
+      %td
+        = f.text_area :sales_notes
     %tr
       %td
-        Photos go here
+        - f.fields_for :photos do |photo_form|
+          %p
+            = photo_form.label :photo
+            %br
+            = photo_form.file_field :photo
+
+          - unless photo_form.object.new_record?
+            %p
+              = photo_form.label :_delete, 'Remove:'
+              = photo_form.check_box :_delete
     %tr
       %td= f.submit "Submit"

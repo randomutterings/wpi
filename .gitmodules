@@ -1,9 +1,6 @@
 [submodule "vendor/plugins/nifty-generators"]
 	path = vendor/plugins/nifty-generators
 	url = git://github.com/ryanb/nifty-generators.git
-[submodule "paperclip"]
-	path = paperclip
-	url = git://github.com/thoughtbot/paperclip.git
 [submodule "vendor/plugins/paperclip"]
 	path = vendor/plugins/paperclip
 	url = git://github.com/thoughtbot/paperclip.git
@@ -13,3 +10,6 @@
 [submodule "vendor/plugins/stateselect"]
 	path = vendor/plugins/stateselect
 	url = git://github.com/bansalakhil/stateselect.git
+[submodule "vendor/rails"]
+	path = vendor/rails
+	url = git://github.com/rails/rails.git

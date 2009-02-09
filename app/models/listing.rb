@@ -3,6 +3,7 @@ class Listing < ActiveRecord::Base
   belongs_to :status
   has_many :photos,
            :dependent => :destroy
+  accepts_nested_attributes_for :photos, :allow_destroy => true
            
   attr_accessor :status_name
   

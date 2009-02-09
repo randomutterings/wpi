@@ -17,6 +17,7 @@ class ListingsController < ApplicationController
   
   def new
     @listing = Listing.new
+    2.times { @listing.photos.build }
   end
   
   def create
