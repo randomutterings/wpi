@@ -18,11 +18,11 @@
       
       #container
         #sidebar
-          .menu=link_to "HOME", page_path("home")
+          .menu=link_to "HOME", page_permalink_path("home")
           .menu=link_to "Listings", listings_url
         
           - @pages = Page.find(:all).each do |page|
-            %div.menu=link_to page.name, page_path(page.permalink) unless page.permalink == "home"
+            %div.menu=link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
           
         #main
           = yield

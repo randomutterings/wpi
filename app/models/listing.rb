@@ -1,7 +1,9 @@
 class Listing < ActiveRecord::Base
   belongs_to :lead
   belongs_to :status
-  
+  has_many :photos,
+           :dependent => :destroy
+           
   attr_accessor :status_name
   
   before_save :create_status_from_name
@@ -17,4 +19,9 @@ class Listing < ActiveRecord::Base
       self.status_id = status.id
     end
   end
+  
+  def primary_photo
+    self.photos.find_by_primary(true)
+  end
+  
 end

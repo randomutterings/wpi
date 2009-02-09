@@ -1,0 +1,13 @@
+- title "Photo"
+
+%p
+  = @photo.listing.title
+  =image_tag @photo.photo.url(:large)
+
+- if authenticated?
+  %p
+    = link_to "Edit", edit_photo_path(@photo)
+    |
+    = link_to "Destroy", @photo, :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", photos_path

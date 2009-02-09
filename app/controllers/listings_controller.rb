@@ -1,10 +1,18 @@
 class ListingsController < ApplicationController
   def index
-    @listings = Listing.all
+    if params[:all]
+      @listings = Listing.all
+    else
+      @listings = Listing.find_all_by_display(true)
+    end
   end
   
   def show
-    @listing = Listing.find(params[:id])
+    if params[:permalink]
+      @listing = Listing.find_by_permalink!(params[:permalink])
+    else
+      @listing = Listing.find(params[:id])
+    end
   end
   
   def new

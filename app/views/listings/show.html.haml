@@ -1,5 +1,8 @@
 - title "Listing"
 
+- @listing.photos.each do |p|
+  = image_tag(p.photo.url(:medium))
+
 %p
   %strong Lead:
   =h @listing.lead_id

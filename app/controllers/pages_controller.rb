@@ -5,7 +5,11 @@ class PagesController < ApplicationController
   
   def show
     if params[:permalink]
-      @page = Page.find_by_permalink!(params[:permalink])
+      if params[:permalink] == "home"
+        render :partial => "home", :layout => "application"
+      else
+        @page = Page.find_by_permalink!(params[:permalink])
+      end
     else
       if params[:id].nil?
         render :partial => "home", :layout => "application"

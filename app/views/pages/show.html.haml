@@ -3,7 +3,7 @@
 = @page.content
 
 %p
-  -if session[:is_authenticated] == true
+  -if authenticated?
     = link_to "New Page", new_page_path
     |
     = link_to "Edit", edit_page_path(@page)

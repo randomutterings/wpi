@@ -1,23 +1,40 @@
 - title "Listings"
+     
+- for listing in @listings
+  .clear.padding_bottom
+    .float_left.padding_right= link_to(image_tag(listing.primary_photo.photo.url(:small)), listing) unless listing.primary_photo.nil?
+    - if authenticated?
+      .float_right
+        = link_to 'Photos', photos_path(:listing_id => listing)
+        = link_to 'Edit', edit_listing_path(listing)
+        = link_to 'Destroy', listing, :confirm => 'Are you sure?', :method => :delete
+    %table{:cellspacing => 5}
+      %tr
+        %td= link_to listing.title, listing
+      %tr
+        %td
+          List Price:
+        %td= h number_to_currency(listing.price)
+      %tr
+        %td
+          Location:
+        %td
+          = h listing.city
+          = h listing.state
+      %tr
+        %td
+          Bed/Bath:
+        %td
+          = h listing.bedrooms
+          bedrooms
+          = h listing.bathrooms
+          bathrooms
 
-%table
-  %tr
-    %th Title
-    %th Price
-    %th City
-    %th State
-    %th Bedrooms
-    %th Bathrooms
-  - for listing in @listings
-    %tr
-      %td= h listing.title
-      %td= h listing.price
-      %td= h listing.city
-      %td= h listing.state
-      %td= h listing.bedrooms
-      %td= h listing.bathrooms
-      %td= link_to 'Show', listing
-      %td= link_to 'Edit', edit_listing_path(listing)
-      %td= link_to 'Destroy', listing, :confirm => 'Are you sure?', :method => :delete
-
-%p= link_to "New Listing", new_listing_path
+- if authenticated?
+  %p
+    = link_to "New Listing", new_listing_path
+    &nbsp;
+    - if params[:all] == "true"
+      = link_to "Only show listings displayed to public", listings_path
+    - else
+      = link_to "Show All", listings_path(:all => true)
