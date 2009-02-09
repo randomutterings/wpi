@@ -4,9 +4,9 @@ class CreateListings < ActiveRecord::Migration
       t.integer :lead_id
       t.string :title
       t.string :permalink
-      t.boolean :featured
+      t.boolean :featured, :default => false
       t.integer :status_id
-      t.boolean :display
+      t.boolean :display, :default => true
       t.decimal :price
       t.text :description
       t.string :address
@@ -23,7 +23,7 @@ class CreateListings < ActiveRecord::Migration
       t.string :year_built
       t.string :bedrooms
       t.string :bathrooms
-      t.boolean :furnished
+      t.boolean :furnished, :default => false
       t.string :garage
       t.text :basement
       t.text :space_details

@@ -17,6 +17,9 @@ class PhotosController < ApplicationController
   
   def create
     @photo = Photo.new(params[:photo])
+    if @photo.listing.photos.empty?
+      @photo.primary = true
+    end
     if @photo.save
       flash[:notice] = "Successfully created photo."
       redirect_to @photo

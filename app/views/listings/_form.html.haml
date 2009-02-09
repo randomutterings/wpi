@@ -20,7 +20,7 @@
       %td
         = f.label :featured
         .instructions Put a check here to have this listing featured on the home page.
-      %td= f.check_box :featured
+      %td= f.select :featured, {:yes => true, :no => false}
     %tr
       %td
         = f.label :status_id
@@ -33,7 +33,7 @@
       %td
         = f.label :display
         .instructions Put a check here to have this listing displayed to the public.
-      %td= f.check_box :display
+      %td= f.select :display, {:yes => true, :no => false}
     %tr
       %td= f.label :price
       %td= f.text_field :price
@@ -88,7 +88,7 @@
       %td= f.text_field :bathrooms
     %tr
       %td= f.label :furnished
-      %td= f.check_box :furnished
+      %td= f.select :furnished, {:yes => true, :no => false}
     %tr
       %td= f.label :garage
       %td= f.text_field :garage
@@ -147,17 +147,5 @@
           dishwasher included.
       %td
         = f.text_area :sales_notes
-    %tr
-      %td
-        - f.fields_for :photos do |photo_form|
-          %p
-            = photo_form.label :photo
-            %br
-            = photo_form.file_field :photo
-
-          - unless photo_form.object.new_record?
-            %p
-              = photo_form.label :_delete, 'Remove:'
-              = photo_form.check_box :_delete
     %tr
       %td= f.submit "Submit"
