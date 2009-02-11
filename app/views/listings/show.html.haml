@@ -92,8 +92,6 @@
   =h @listing.sales_notes
 
 %p
-  = link_to 'Photos', photos_path(:listing_id => @listing)
-  |
   = link_to "Edit", edit_listing_path(@listing)
   |
   = link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete

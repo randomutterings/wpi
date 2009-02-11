@@ -1,0 +1,5 @@
+%div.photo.clear
+  - unless f.object.new_record?
+    %div.float_left.padding_right.padding_bottom= image_tag(f.object.photo.url(:small))
+  = f.file_field :photo
+  = remove_link_unless_new_record(f)

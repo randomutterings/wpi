@@ -5,7 +5,6 @@
     .float_left.padding_right= link_to(image_tag(listing.primary_photo.photo.url(:small)), listing) unless listing.primary_photo.nil?
     - if authenticated?
       .float_right
-        = link_to 'Photos', photos_path(:listing_id => listing)
         = link_to 'Edit', edit_listing_path(listing)
         = link_to 'Destroy', listing, :confirm => 'Are you sure?', :method => :delete
     %table{:cellspacing => 5}

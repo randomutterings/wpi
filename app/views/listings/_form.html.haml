@@ -1,4 +1,4 @@
-- form_for @listing, :html => { :multipart => true } do |f|
+- form_for setup_listing(@listing), :html => { :multipart => true } do |f|
   = f.error_messages
   %table{:cellspacing => "10", :cellpadding => "5"}
     %tr
@@ -20,7 +20,7 @@
       %td
         = f.label :featured
         .instructions Put a check here to have this listing featured on the home page.
-      %td= f.select :featured, {:yes => true, :no => false}
+      %td= f.check_box :featured
     %tr
       %td
         = f.label :status_id
@@ -33,7 +33,7 @@
       %td
         = f.label :display
         .instructions Put a check here to have this listing displayed to the public.
-      %td= f.select :display, {:yes => true, :no => false}
+      %td= f.check_box :display
     %tr
       %td= f.label :price
       %td= f.text_field :price
@@ -88,7 +88,7 @@
       %td= f.text_field :bathrooms
     %tr
       %td= f.label :furnished
-      %td= f.select :furnished, {:yes => true, :no => false}
+      %td= f.check_box :furnished
     %tr
       %td= f.label :garage
       %td= f.text_field :garage
@@ -145,7 +145,14 @@
           water, gas and sewer.
           Refrigerator, oven and
           dishwasher included.
+      %td= f.text_area :sales_notes
+    %tr
+      %td Photos
       %td
-        = f.text_area :sales_notes
+        #photos
+          - f.fields_for :photos do |photo_form|
+            = render :partial => 'photo', :locals => { :f => photo_form }
+        %div.clear
+          = add_record_link f, :photos, 'Add a photo'
     %tr
       %td= f.submit "Submit"

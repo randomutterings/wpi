@@ -34,6 +34,8 @@ class ListingsController < ApplicationController
   end
   
   def update
+    params[:listing][:photos_attributes].delete_if {|key, value| value.nil? }
+    logger.error "<---begin log #{params[:listing][:photos_attributes]} end log --->"
     @listing = Listing.find(params[:id])
     if @listing.update_attributes(params[:listing])
       flash[:notice] = "Successfully updated listing."

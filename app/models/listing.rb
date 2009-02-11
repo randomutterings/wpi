@@ -1,12 +1,15 @@
 class Listing < ActiveRecord::Base
-  belongs_to :lead
-  belongs_to :status
-  has_many :photos,
-           :dependent => :destroy
-           
-  attr_accessor :status_name
-  
+  belongs_to  :lead
+  belongs_to  :status
+  has_many    :photos,
+              :dependent => :destroy
   before_save :create_status_from_name
+  
+  accepts_nested_attributes_for :photos, 
+                                :allow_destroy => true,
+                                :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
+  
+  attr_accessor :status_name
   
   def create_status_from_name
     status = Status.find_by_name(status_name)
