@@ -10,3 +10,6 @@
 [submodule "vendor/plugins/stateselect"]
 	path = vendor/plugins/stateselect
 	url = git://github.com/bansalakhil/stateselect.git
+[submodule "vendor/rails"]
+	path = vendor/rails
+	url = git://github.com/rails/rails.git
