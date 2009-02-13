@@ -1,9 +1,16 @@
 - title "Listing"
 
-- @listing.photos.each do |p|
-  = image_tag(p.photo.url(:medium))
+%div.photo_viewer
+  %div.float_right
+    .dropshadow_large
+      = image_tag(@listing.photos.first.photo.url(:medium), :id => "medium_photo")
+  - @listing.photos.each do |p|
+    .dropshadow_small.margin_bottom.inline
+      = image_tag(p.photo.url(:small), :class => "thumbnail")
+        
+  %div.clear
 
-%p
+%p.clear
   %strong Lead:
   =h @listing.lead_id
 %p
@@ -91,9 +98,10 @@
   %strong Sales Notes:
   =h @listing.sales_notes
 
-%p
-  = link_to "Edit", edit_listing_path(@listing)
-  |
-  = link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", listings_path
+- if authenticated?
+  %p
+    = link_to "Edit", edit_listing_path(@listing)
+    |
+    = link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", listings_path

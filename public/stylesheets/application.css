@@ -28,20 +28,66 @@ label {
 .float_right {
   float: right; }
 
+.inline {
+  display: inline; }
+
 .padding_bottom {
   padding-bottom: 20px; }
 
 .padding_right {
   padding-right: 20px; }
 
+.margin_bottom {
+  margin-bottom: 10px; }
+
+.margin_right {
+  margin-right: 10px; }
+
+.section {
+  border: 1px solid black; }
+
+.dropshadow_small {
+  background: url("../images/dropshadow.png") no-repeat bottom right;
+  width: 84px;
+  height: 81px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding-right: 20px; }
+
+.dropshadow_small a img {
+  position: relative;
+  top: 0px;
+  left: -2px;
+  padding: 2px;
+  margin: -5px;
+  border: 1px solid black; }
+
+.dropshadow_large {
+  background: url("../images/dropshadow.png") no-repeat bottom right;
+  width: 406px;
+  height: 300px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px; }
+
+.dropshadow_large img {
+  position: relative;
+  top: -6px;
+  left: 0px;
+  padding: 2px;
+  margin: -5px;
+  border: 1px solid black; }
+
+.photo_viewer {
+  width: 650px;
+  padding: 20px; }
+
 td {
   vertical-align: top; }
 
 th {
   padding-top: 20px; }
-
-.section {
-  border: 1px solid black; }
 
 #site {
   width: 75%;
@@ -60,7 +106,7 @@ th {
 
 #main {
   float: right;
-  width: 90%; }
+  width: 85%; }
 
 #container_footer {
   clear: both; }
