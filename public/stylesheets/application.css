@@ -14,6 +14,10 @@ a {
 label {
   font-weight: bold; }
 
+.title {
+  font-size: 14px;
+  font-weight: bold; }
+
 .instructions {
   font-size: 10px;
   font-style: italic;
@@ -21,6 +25,10 @@ label {
   width: 150px;
   padding-right: 10px;
   display: block; }
+
+.center {
+  text-align: center;
+  width: 100%; }
 
 .float_left {
   float: left; }
@@ -49,9 +57,9 @@ label {
 .dropshadow_small {
   background: url("../images/dropshadow.png") no-repeat bottom right;
   width: 84px;
-  height: 81px;
+  height: 80px;
   float: left;
-  margin-right: 15px;
+  margin-right: 0px;
   margin-bottom: 15px;
   padding-right: 20px; }
 
@@ -69,7 +77,8 @@ label {
   height: 300px;
   float: left;
   margin-right: 5px;
-  margin-top: 5px; }
+  margin-top: 5px;
+  margin-bottom: 20px; }
 
 .dropshadow_large img {
   position: relative;
@@ -80,7 +89,7 @@ label {
   border: 1px solid black; }
 
 .photo_viewer {
-  width: 650px;
+  width: 400px;
   padding: 20px; }
 
 td {
