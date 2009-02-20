@@ -5,6 +5,10 @@ module ApplicationHelper
     session[:is_authenticated] == true
   end
   
+  def logged_in?
+    authenticated?
+  end
+  
   def remove_link_unless_new_record(fields)
     unless fields.object.new_record?
       out = ''
