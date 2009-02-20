@@ -13,3 +13,6 @@
 [submodule "vendor/rails"]
 	path = vendor/rails
 	url = git://github.com/rails/rails.git
+[submodule "vendor/plugins/mortgage_calculator_helper"]
+	path = vendor/plugins/mortgage_calculator_helper
+	url = git://github.com/randomutterings/mortgage_calculator_helper.git

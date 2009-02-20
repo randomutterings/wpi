@@ -1,7 +1,7 @@
 body {
   background-color: #4b7399;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px; }
+  font-size: 12px; }
 
 a {
   color: #0000FF; }
@@ -11,8 +11,6 @@ a {
 .clear {
   clear: both; }
 
-label {
-  font-weight: bold; }
 
 .title {
   font-size: 14px;
