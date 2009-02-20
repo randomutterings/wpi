@@ -4,7 +4,7 @@
   =image_tag "icon_contact.jpg"
   =image_tag "icon_tell_a_friend.jpg"
   =link_to(image_tag("icon_view_map.jpg"), "http://maps.google.com/?q=#{@listing.address}+#{@listing.city}+#{@listing.state}+#{@listing.zip}", :target => "new")
-  =image_tag "icon_mortgage_calculator.jpg"
+  =link_to(image_tag("icon_mortgage_calculator.jpg"), page_permalink_path("mortgage_calculator"), :target => "new")
   =image_tag "icon_print.jpg"
 
 %div.photo_viewer.float_right

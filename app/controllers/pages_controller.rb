@@ -7,6 +7,8 @@ class PagesController < ApplicationController
     if params[:permalink]
       if params[:permalink] == "home"
         render :partial => "home", :layout => "application"
+      elsif params[:permalink] == "mortgage_calculator"
+        render :partial => "mortgage_calculator", :layout => "application"
       else
         @page = Page.find_by_permalink!(params[:permalink])
       end
