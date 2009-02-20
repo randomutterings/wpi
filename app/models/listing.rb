@@ -3,13 +3,20 @@ class Listing < ActiveRecord::Base
   belongs_to  :status
   has_many    :photos,
               :dependent => :destroy
-  before_save :create_status_from_name
+  before_save :create_status_from_name,
+              :default_primary_photo
   
   accepts_nested_attributes_for :photos, 
                                 :allow_destroy => true,
                                 :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
   
   attr_accessor :status_name
+  
+  def default_primary_photo
+    if primary_photo.nil?
+      self.photos.first.primary = true unless self.photos.empty?
+    end
+  end
   
   def create_status_from_name
     status = Status.find_by_name(status_name)

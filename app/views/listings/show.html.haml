@@ -7,15 +7,16 @@
   =link_to(image_tag("icon_mortgage_calculator.jpg"), page_permalink_path("mortgage_calculator"), :target => "new")
   =image_tag "icon_print.jpg"
 
-%div.photo_viewer.float_right
-  %div
-    .dropshadow_large
-      = image_tag(@listing.photos.first.photo.url(:medium), :id => "medium_photo")
-  - @listing.photos.each do |p|
-    .dropshadow_small.margin_bottom.inline
-      = image_tag(p.photo.url(:small), :class => "thumbnail")
+- unless @listing.photos.empty?
+  %div.photo_viewer.float_right
+    %div
+      .dropshadow_large
+        = image_tag(@listing.photos.first.photo.url(:medium), :id => "medium_photo")
+    - @listing.photos.each do |p|
+      .dropshadow_small.margin_bottom.inline
+        = image_tag(p.photo.url(:small), :class => "thumbnail")
         
-  %div.clear
+    %div.clear
 
 %div.title=h @listing.title
 - unless @listing.price.blank?
