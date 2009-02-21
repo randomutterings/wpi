@@ -1,7 +1,7 @@
 - form_for @email do |f|
   = f.error_messages
   %p
-    = f.label :to, "To <span class='instructions'>(Hold down ctrl to select multiple leads.)</span>"
+    = f.label :to, "<span style='width:250px;' class='instructions'><font class='normal'>To</font>&nbsp;&nbsp;(Hold down ctrl to select multiple leads.)</span>"
     %br
     = f.collection_select(:to, Lead.all, :email_with_name, :email_with_name, {:selected => params[:email_ids]}, :multiple => true)
   %p

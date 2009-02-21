@@ -1,4 +1,6 @@
 class EmailsController < ApplicationController
+  before_filter :authenticate, :only => [:index, :show, :new, :create, :destroy]
+  
   def index
     @emails = Email.all
   end

@@ -3,6 +3,11 @@ body {
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px; }
 
+.normal {
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 12px;
+  font-style: normal; }
+
 a {
   color: #0000FF; }
   a img {
@@ -110,6 +115,10 @@ th {
 
 #menu {
   padding-bottom: 10px; }
+  #menu a {
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 6px; }
 
 #main {
   width: 100%; }
