@@ -1,5 +1,7 @@
 - form_for @email do |f|
   = f.error_messages
+  = f.hidden_field :from, :value => Agent.find(session[:agent]).email_with_name
+  = f.hidden_field :email_type, :value => "client"
   %p
     = f.label :to, "<span style='width:250px;' class='instructions'><font class='normal'>To</font>&nbsp;&nbsp;(Hold down ctrl to select multiple leads.)</span>"
     %br

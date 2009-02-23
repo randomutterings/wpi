@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def authenticated?
+    session[:is_authenticated] == true
+  end
+  
   def set_agent
     if session[:agent].nil?
       if params[:permalink].nil?

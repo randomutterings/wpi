@@ -1,13 +1,15 @@
 development:
+  site_name: WPI Properties
   domain: http://wpi.local
-  username: wpip
-  password: shawn
+  username: foo
+  password: bar
   image_magick_path: /usr/local/bin
 test:
   domain: http://wpi.local
 
 production:
+  site_name: WPI Properties
   domain: http://www.wpi-properties.com
-  username: foo
-  password: bar
+  username: wpip
+  password: shawn
   image_magick_path: /usr/local/bin

@@ -1,5 +1,5 @@
 class EmailsController < ApplicationController
-  before_filter :authenticate, :only => [:index, :show, :new, :create, :destroy]
+  before_filter :authenticate, :only => [:index, :show, :destroy]
   
   def index
     @emails = Email.all
@@ -10,20 +10,15 @@ class EmailsController < ApplicationController
   end
   
   def new
+    session[:email_type] = params[:email_type]
     @email = Email.new
   end
   
   def create
     @email = Email.new(params[:email])
-    @email.from = Agent.find(session[:agent]).email_with_name
-    @email.to = @email.to.join(", ") unless @email.to.nil?
     if @email.save
-      if Notifier.deliver_lead_email(@email.from, params[:email][:to], @email.subject, @email.body)
-        flash[:notice] = "Successfully created email."
-        redirect_to @email
-      else
-        render :action => 'new'
-      end
+      flash[:notice] = "Successfully created email."
+      redirect_to @email
     else
       render :action => 'new'
     end

@@ -1,0 +1,29 @@
+- form_for @email do |f|
+  = f.error_messages
+  = f.hidden_field :email_type, :value => "friend"
+  %p
+    = f.label :from_name, "Your name"
+    %br
+    = f.text_field :from_name
+  %p
+    = f.label :from_email_address, "Your email address"
+    %br
+    = f.text_field :from_email_address
+  %p
+    = f.label :to_namem, "Your friend's name"
+    %br
+    = f.text_field :to_name
+  %p
+    = f.label :to_email_address, "Your friend's email address"
+    %br
+    = f.text_field :to_email_address
+  %p
+    = f.label :subject
+    %br
+    = f.text_field :subject, :value => subject_text
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body, :value => body_text
+  %p
+    = f.submit "Submit"

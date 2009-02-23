@@ -18,3 +18,5 @@ school info (different site)
 
 eclassified (different site eclassified.net)
 <iframe name="eclassifieds" src="http://www.wpirealty.com/cgi-bin/classifieds/classifieds.pl?session_key=" height="1800" width="990" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>
+
+add upload progress
