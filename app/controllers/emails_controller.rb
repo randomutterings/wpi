@@ -18,7 +18,13 @@ class EmailsController < ApplicationController
     @email = Email.new(params[:email])
     if @email.save
       flash[:notice] = "Successfully created email."
-      redirect_to @email
+      if authenticated?
+        redirect_to @email
+      elsif session[:agent]
+        redirect_to agent_path(session[:agent])
+      else
+        redirect_to page_permalink_path("home")
+      end
     else
       render :action => 'new'
     end

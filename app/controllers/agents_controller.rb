@@ -4,6 +4,7 @@ class AgentsController < ApplicationController
   end
   
   def show
+    @email = Email.new
     if params[:permalink].nil?
       if params[:id].nil?
         @agent = Agent.find(session[:agent])

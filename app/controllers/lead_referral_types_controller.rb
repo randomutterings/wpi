@@ -1,4 +1,5 @@
 class LeadReferralTypesController < ApplicationController
+  before_filter :authenticate, :only => [:index, :show, :new, :create, :edit, :update, :destroy]
   def index
     @lead_referral_types = LeadReferralType.all
   end

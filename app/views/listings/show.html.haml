@@ -40,7 +40,7 @@
 - unless @listing.description.blank?
   %p
     %strong Description:
-    =h @listing.description
+    =simple_format @listing.description
 - unless @listing.zip.blank?
   %p
     %strong Zip:
@@ -84,19 +84,19 @@
 - unless @listing.basement.blank?
   %p
     %strong Basement:
-    =h @listing.basement
+    =simple_format @listing.basement
 - unless @listing.space_details.blank?
   %p
     %strong Space Details:
-    =h @listing.space_details
+    =simple_format @listing.space_details
 - unless @listing.construction_details.blank?
   %p
     %strong Construction Details:
-    =h @listing.construction_details
+    =simple_format @listing.construction_details
 - unless @listing.features.blank?
   %p
     %strong Features:
-    =h @listing.features
+    =simple_format @listing.features
 
 - if authenticated?
   %p

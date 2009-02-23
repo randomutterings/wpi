@@ -1,59 +1,44 @@
 - title "Agent"
 
-%p
-  = image_tag(@agent.photo.url(:medium))
-%p
-  %strong First Name:
+%div.dropshadow_original
+  = image_tag(@agent.photo.url)
+%div
   =h @agent.first_name
-%p
-  %strong Last Name:
   =h @agent.last_name
-%p
-  %strong Address1:
+%div
   =h @agent.address1
-%p
-  %strong Address2:
-  =h @agent.address2
-%p
-  %strong City:
+  %br
+  - unless @agent.address2.blank?
+    =h @agent.address2
+    %br
   =h @agent.city
-%p
-  %strong State:
   =h @agent.state
-%p
-  %strong Zip:
   =h @agent.zip
-%p
-  %strong County:
-  =h @agent.county
-%p
+%div
+  =link_to(image_tag("icon_view_map.jpg"), "http://maps.google.com/?q=#{@agent.address1}+#{@agent.city}+#{@agent.state}+#{@agent.zip}", :target => "new")
+%div
   %strong Phone:
   =h @agent.phone
-%p
+%div
   %strong Fax:
   =h @agent.fax
-%p
-  %strong Tollfree:
-  =h @agent.tollfree
-%p
+- unless @agent.tollfree.blank?
+  %div
+    %strong Tollfree:
+    =h @agent.tollfree
+%div
   %strong Email:
   =h @agent.email
-%p
-  %strong Description:
+%div.clear.padding_bottom
   = simple_format @agent.description
-%p
-  %strong Permalink:
-  =h @agent.permalink
-%p
-  %strong Idx Url:
-  =h @agent.idx_url
-%p
-  %strong Active:
-  =h @agent.active
+  
+%div
+  = render "emails/agent"
 
-%p
-  = link_to "Edit", edit_agent_path(@agent)
-  |
-  = link_to "Destroy", @agent, :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", agents_path
+- if authenticated?
+  %div
+    = link_to "Edit", edit_agent_path(@agent)
+    |
+    = link_to "Destroy", @agent, :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", agents_path
