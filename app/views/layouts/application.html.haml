@@ -31,7 +31,7 @@
             = link_to "Admin", new_listing_url
         
           - @pages = Page.find(:all).each do |page|
-            %div.menu=link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
+            =link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
           
         #main
           = yield
