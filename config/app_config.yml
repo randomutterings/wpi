@@ -1,7 +1,7 @@
 development:
   domain: http://wpi.local
-  username: foo
-  password: bar
+  username: wpip
+  password: shawn
   image_magick_path: /usr/local/bin
 test:
   domain: http://wpi.local
