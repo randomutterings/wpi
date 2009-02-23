@@ -5,7 +5,7 @@
   =link_to(image_tag("icon_tell_a_friend.jpg"), new_email_path(:email_type => "friend", :listing_id => @listing.id))
   =link_to(image_tag("icon_view_map.jpg"), "http://maps.google.com/?q=#{@listing.address}+#{@listing.city}+#{@listing.state}+#{@listing.zip}", :target => "new")
   =link_to(image_tag("icon_mortgage_calculator.jpg"), page_permalink_path("mortgage_calculator"), :target => "new")
-  =link_to(image_tag("icon_print.jpg"), listing_path(@listing, :print => true))
+  =link_to(image_tag("icon_print.jpg"), listing_path(@listing, :print => true), :target => "new")
 
 - unless @listing.photos.empty?
   %div.photo_viewer.float_right
