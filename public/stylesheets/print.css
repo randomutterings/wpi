@@ -1,0 +1,9 @@
+body {
+  background-color: #ffffff; }
+
+.red {
+  color: red; }
+
+#container {
+  width: 650px;
+  padding: 20px; }

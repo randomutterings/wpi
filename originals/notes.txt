@@ -1,6 +1,6 @@
-agents
-contact manager
-listings (show with contact, tell a friend, view map, mortgage calculator, print)
+#agents
+#contact manager
+#listings (show with contact, tell a friend, view map, mortgage calculator, print)
 about the agent (description from agent model and contact form)
 file manager with access permissions
 buying and selling (auto responder with attachments)

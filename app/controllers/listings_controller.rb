@@ -13,6 +13,9 @@ class ListingsController < ApplicationController
     else
       @listing = Listing.find(params[:id])
     end
+    if params[:print] == true.to_s
+      render :partial => 'print', :layout => 'print'
+    end
   end
   
   def new

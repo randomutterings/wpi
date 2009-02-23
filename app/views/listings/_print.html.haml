@@ -1,14 +1,17 @@
 - title "Listing"
 
-%div
-  =link_to(image_tag("icon_contact.jpg"), new_email_path(:email_type => "agent", :listing_id => @listing.id))
-  =link_to(image_tag("icon_tell_a_friend.jpg"), new_email_path(:email_type => "friend", :listing_id => @listing.id))
-  =link_to(image_tag("icon_view_map.jpg"), "http://maps.google.com/?q=#{@listing.address}+#{@listing.city}+#{@listing.state}+#{@listing.zip}", :target => "new")
-  =link_to(image_tag("icon_mortgage_calculator.jpg"), page_permalink_path("mortgage_calculator"), :target => "new")
-  =link_to(image_tag("icon_print.jpg"), listing_path(@listing, :print => true))
+%div.title.float_left=h @listing.title
+
+- unless @listing.price.blank?
+  %div.title.float_right
+    =h number_to_currency(@listing.price)
+    - unless @listing.status.blank?
+      %span.red= "- #{@listing.status.name}"
+
+%div.clear.padding_bottom
 
 - unless @listing.photos.empty?
-  %div.photo_viewer.float_right
+  %div.photo_viewer.float_left
     %div
       .dropshadow_large
         = image_tag(params[:photo] || @listing.photos.first.photo.url(:medium), :id => "medium_photo")
@@ -18,11 +21,6 @@
         
     %div.clear
 
-%div.title=h @listing.title
-- unless @listing.price.blank?
-  %p
-    %strong List Price:
-    = h number_to_currency(@listing.price)
 - unless @listing.city.blank? && @listing.state.blank?
   %p
     %strong Location:
@@ -97,11 +95,3 @@
   %p
     %strong Features:
     =h @listing.features
-
-- if authenticated?
-  %p
-    = link_to "Edit", edit_listing_path(@listing)
-    |
-    = link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete
-    |
-    = link_to "View All", listings_path
