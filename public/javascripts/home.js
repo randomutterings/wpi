@@ -19,7 +19,7 @@ function cycleFeaturedProperties(hide, show){
 }
 
 function showFirstProperty(){
-	if (jQuery(".feature")){
+	if (jQuery(".feature").length > 1){
 		window.setTimeout(function(){ cycleFeaturedProperties(1, 2) }, 3000);
 	}
 }
