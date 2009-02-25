@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   
   def set_agent
     if session[:agent].nil?
-      if params[:permalink].nil?
+      if params[:permalink].nil? || params[:permalink] == 'home'
         session[:agent] = Agent.find(:first).id
       else
         session[:agent] = Agent.find_by_permalink(params[:permalink])

@@ -199,24 +199,55 @@ th
   img
     :margin 0px 20px 10px 10px
 
-#menu
+#nav
   :padding 0px
   :height 62px
-  div
-    :border-right 1px solid white
-    :float left
-    :height 44px
-    :padding-left 18px
-    :padding-right 18px
-    :padding-top 18px
-    a
-      :font
-        :size 20px
-        :weight normal
-      :text-decoration none
-      :color #FFFFFF
-    a:hover
-      :color = !secondary_color
+
+#nav, #nav ul
+  :padding 0
+  :margin 0
+  :list-style none
+
+#nav a
+  :display block
+  :font
+    :size 20px
+    :weight normal
+  :text-decoration none
+  :color #FFFFFF
+  
+#nav a:hover
+  :color = !secondary_color
+
+#nav li.top
+  :border-right 1px solid white
+  :float left
+  :height 44px
+  
+#nav li
+  :background-color = !primary_color
+  :width 100px
+  :text-align center
+  :padding-left 18px
+  :padding-right 18px
+  :padding-top 18px
+  
+#nav li ul
+  :position absolute
+  :left -999em
+
+#nav li:hover ul
+  :left auto
+  :margin-left -18px
+  
+#nav li.sfhover ul
+  :left auto
+  :margin-top 4px
+  
+#nav li.sfhover li
+  :margin-top -2px
+  :position relative
+  :left -68px
 
 #main
   :background-color = !secondary_color

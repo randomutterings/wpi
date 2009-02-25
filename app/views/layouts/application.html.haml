@@ -38,19 +38,22 @@
               %strong Tollfree:
               =h @agent.tollfree     
         
-        #menu
-          %div= link_to "Home", page_permalink_path("home")
-          %div= link_to "Listings", listings_url
-          - if authenticated?
-            %div= link_to "Agents", agents_url
-            %div= link_to "Leads", leads_url
-            %div= link_to "Pages", pages_url
-            %div= link_to "Emails", emails_url
-          - else
-            %div= link_to "Admin", leads_url
-        
-          - @pages = Page.find(:all).each do |page|
-            %div=link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
+        %ul#nav
+          %li.top= link_to "Home", page_permalink_path("home")
+          %li.top= link_to "Listings", listings_url
+          %li.top
+            = link_to "Admin", leads_url
+            - if authenticated?
+              %ul
+                %li= link_to "Agents", agents_url
+                %li= link_to "Leads", leads_url
+                %li= link_to "Pages", pages_url
+                %li= link_to "Emails", emails_url          
+          %li.top
+            = link_to "Pages", "javascript:void(0);"
+            %ul
+              - @pages = Page.all.each do |page|
+                %li=link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
           
         #main
           - flash.each do |name, msg|
