@@ -5,5 +5,7 @@ body {
   color: red; }
 
 #container {
-  width: 650px;
-  padding: 20px; }
+  width: 650px; }
+
+#main {
+  padding: 10px; }

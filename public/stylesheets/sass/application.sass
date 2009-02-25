@@ -1,8 +1,8 @@
-!primary_color = #4B7399
-!secondary_color = #FFCD4C
+!primary_color = #27394A
+!secondary_color = #ECE2AD
 
 body
-  :background-color = !primary_color
+  :background-color #FFFFFF
   :font
     :family Verdana, Helvetica, Arial
     :size 12px
@@ -12,6 +12,9 @@ body
     :family Verdana, Helvetica, Arial
     :size 12px
     :style normal
+
+.primary_color
+  :color = !primary_color
 
 a
   :color #0000FF
@@ -41,6 +44,9 @@ label
   :text-align center
   :width 100%
 
+.align_right
+  :text-align right
+
 .float_left
   :float left
 
@@ -49,6 +55,13 @@ label
   
 .inline
   :display inline
+  
+.bold
+  :font
+    :weight bold
+
+.padding
+  :padding 20px
 
 .padding_bottom
   :padding-bottom 20px
@@ -56,21 +69,36 @@ label
 .padding_right
   :padding-right 20px
   
+.padding_left
+  :padding-left 20px
+
+.padding_top
+  :padding-top 20px
+
+.margin_top
+  :margin-top 10px
+  
 .margin_bottom
   :margin-bottom 10px
 
 .margin_right
   :margin-right 10px
+
+.margin
+  :margin 10px
+
+.hidden
+  :display none
   
 .section
   :border 1px solid black
 
-.dropshadow_small
+.dropshadow_thumb
   :background url("../images/dropshadow.png") no-repeat bottom right
-  :width 84px
-  :height 80px
+  :width 78px
+  :height 75px
   :float left
-  :margin-left 14px
+  :margin-left 15px
   :margin-right 15px
   :margin-bottom 15px
   :padding-right 20px
@@ -79,45 +107,57 @@ label
       :position relative
       :top 0px
       :left -2px
-      :padding 2px
       :margin -5px
-      :border 1px solid black
+      
+.dropshadow_small
+  :background url("../images/dropshadow.png") no-repeat bottom right
+  :width 165px
+  :height 126px
+  :margin-right 20px
+  :margin-bottom 20px
+  img
+    :position relative
+    :top -2px
+    :left -5px
+    :margin -5px
 
 .dropshadow_large
   :background url("../images/dropshadow.png") no-repeat bottom right
-  :width 406px
-  :height 300px
-  :float left
-  :margin-right 5px
-  :margin-top 5px
+  :width 400px
+  :height 294px
   :margin-bottom 20px
   img
     :position relative
     :top -6px
     :left 0px
-    :padding 2px
     :margin -5px
-    :border 1px solid black
     
-.dropshadow_original
+.dropshadow_agent
   :background url("../images/dropshadow.png") no-repeat bottom right
-  :width 206px
-  :height 150px
+  :width 200px
+  :height 144px
   :float left
   :margin-right 20px
-  :margin-top 14px
+  :margin-top 4px
   :margin-bottom 20px
   img
     :position relative
     :top -6px
     :left 0px
-    :padding 2px
     :margin -5px
-    :border 1px solid black
 
 .photo_viewer
   :width 400px
   :padding 20px
+  
+.border
+  :border
+    :width 5px
+    :style solid
+    :color = !primary_color
+
+.small_agent
+  :height 90px
   
 td
   :vertical-align top
@@ -125,35 +165,89 @@ td
 th
   :padding-top 20px
   
+#icons
+  :padding-bottom 10px
+  
 #site
   :width 75%
   :margin 0 auto
   
-#header
-
 #container
+  :background-color = !primary_color
   :margin 0 auto
-  :background #fff
-  :padding 20px 40px
+  :padding 10px
   :border solid 1px black
   :margin-top 20px
 
+#header
+  :background-color = !secondary_color
+
+#agent
+  :float right
+  :padding-top 10px
+  :padding-right 20px
+
 #menu
-  :padding-bottom 10px
-  a
-    :font
-      :size 16px
-    :text-decoration none
-    :margin-right 6px
+  :padding 0px
+  :height 62px
+  div
+    :border-right 1px solid white
+    :float left
+    :height 44px
+    :padding-left 18px
+    :padding-right 18px
+    :padding-top 18px
+    a
+      :font
+        :size 20px
+      :text-decoration none
+      :color #FFFFFF
+    a:hover
+      :color = !secondary_color
 
 #main
-  :width 100%
+  :background-color = !secondary_color
+  :padding 20px
 
-#container_footer
+#footer
   :clear both
   
-#footer
-    
+#featured
+  :width 50%
+  :height 250px
+  :border-right 2px solid
+  :border-color = !primary_color
+  :text-align center
+
+#cycle_featured
+  :margin 10px 22px 20px 22px
+  :padding 0px
+  
+#mission
+  :float right
+  :width 50%
+  :font
+    :weight bold
+
+#news
+  :clear both
+  :height 200px
+  :border-top 2px solid
+  :border-bottom 2px solid
+  :border-color = !primary_color
+
+#tag
+  :width 50%
+  :height 130px
+  :text-align center
+  :border-right 2px solid
+  :border-color = !primary_color
+  :line-height 2.0
+
+#open_house
+  :float right
+  :width 50%
+
 #flash_notice,
 #flash_error
   :padding 5px 8px

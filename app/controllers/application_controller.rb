@@ -28,6 +28,7 @@ class ApplicationController < ActionController::Base
         session[:agent] = Agent.find_by_permalink(params[:permalink])
       end
     end
+    @agent = Agent.find(session[:agent])
   end
 
 end

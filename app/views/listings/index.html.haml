@@ -1,11 +1,11 @@
 - title "Listings"
      
 - for listing in @listings
-  .clear.padding_bottom
+  .padding_bottom
     - if listing.primary_photo.nil?
-      .dropshadow_small.float_left.padding_right= link_to(image_tag("/photos/small/missing.png"), listing)
+      .dropshadow_small.float_left= link_to(image_tag("/photos/small/missing.png"), listing)
     - else
-      .dropshadow_small.float_left.padding_right= link_to(image_tag(listing.primary_photo.photo.url(:small)), listing)
+      .dropshadow_small.float_left= link_to(image_tag(listing.primary_photo.photo.url(:small)), listing)
     - if authenticated?
       .float_right
         = link_to 'Edit', edit_listing_path(listing)
@@ -32,7 +32,7 @@
           bedrooms
           = h listing.bathrooms
           bathrooms
-
+    .clear
 - if authenticated?
   %p
     = link_to "New Listing", new_listing_path
@@ -41,3 +41,5 @@
       = link_to "Only show listings displayed to public", listings_path
     - else
       = link_to "Show All", listings_path(:all => true)
+
+.clear

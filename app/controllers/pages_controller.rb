@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   def show
     if params[:permalink]
       if params[:permalink] == "home"
+        @featured = Listing.find_all_by_featured(true)
         render :partial => "home", :layout => "application"
       elsif params[:permalink] == "mortgage_calculator"
         render :partial => "mortgage_calculator", :layout => "application"

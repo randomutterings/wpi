@@ -1,6 +1,8 @@
 - title "Listing"
+- javascript("jquery")
+- javascript("photo_viewer")
 
-%div
+#icons
   =link_to(image_tag("icon_contact.jpg"), new_email_path(:email_type => "agent", :listing_id => @listing.id))
   =link_to(image_tag("icon_tell_a_friend.jpg"), new_email_path(:email_type => "friend", :listing_id => @listing.id))
   =link_to(image_tag("icon_view_map.jpg"), "http://maps.google.com/?q=#{@listing.address}+#{@listing.city}+#{@listing.state}+#{@listing.zip}", :target => "new")
@@ -13,10 +15,8 @@
       .dropshadow_large
         = image_tag(params[:photo] || @listing.photos.first.photo.url(:medium), :id => "medium_photo")
     - @listing.photos.each do |p|
-      .dropshadow_small.margin_bottom.inline
-        = link_to(image_tag(p.photo.url(:small), :class => "thumbnail"), listing_path(@listing, :photo => p.photo.url(:medium)), :class => "thumbnail" )
-        
-    %div.clear
+      .dropshadow_thumb.margin_bottom.inline
+        = link_to(image_tag(p.photo.url(:thumb), :class => "thumbnail"), listing_path(@listing, :photo => p.photo.url(:medium)), :class => "thumbnail")
 
 %div.title=h @listing.title
 - unless @listing.price.blank?
@@ -105,3 +105,5 @@
     = link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete
     |
     = link_to "View All", listings_path
+
+.clear

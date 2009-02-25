@@ -1,5 +1,5 @@
 development:
-  site_name: WPI Properties
+  site_name: WPI Dwyer & Associates
   domain: http://wpi.local
   username: foo
   password: bar
@@ -8,7 +8,7 @@ test:
   domain: http://wpi.local
 
 production:
-  site_name: WPI Properties
+  site_name: WPI Dwyer & Associates
   domain: http://www.wpi-properties.com
   username: wpip
   password: shawn

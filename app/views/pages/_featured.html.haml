@@ -1,0 +1,16 @@
+="<div id='#{featured_counter + 1}' class='hidden feature'>"
+.float_right.primary_color.bold
+  =featured.title
+  %br
+  - unless featured.bedrooms.blank? || featured.bathrooms.blank?
+    =featured.bedrooms
+    Bedroom, 
+    =featured.bathrooms
+    Bath
+    %br
+  - unless featured.city.blank? || featured.state.blank?
+    =featured.city
+    , 
+    =featured.state
+.dropshadow_small=link_to(image_tag(featured.primary_photo.photo.url(:small)), featured)
+="</div>"

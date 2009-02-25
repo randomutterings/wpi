@@ -16,8 +16,8 @@
       .dropshadow_large
         = image_tag(params[:photo] || @listing.photos.first.photo.url(:medium), :id => "medium_photo")
     - @listing.photos.each do |p|
-      .dropshadow_small.margin_bottom.inline
-        = link_to(image_tag(p.photo.url(:small), :class => "thumbnail"), listing_path(@listing, :photo => p.photo.url(:medium)), :class => "thumbnail" )
+      .dropshadow_small.float_left.margin
+        = image_tag(p.photo.url(:small))
         
     %div.clear
 
