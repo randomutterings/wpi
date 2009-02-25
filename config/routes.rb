@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pages
 
-  map.root :controller => "pages", :action => "show"
+  map.root :controller => "pages", :action => "show", :permalink => "home"
   
   map.page_permalink 'pages/link/:permalink', :controller => 'pages', :action => 'show'
   
