@@ -1,0 +1,47 @@
+#main {
+  padding: 0px; }
+
+#featured {
+  float: left;
+  width: 50%;
+  height: 250px;
+  border-right: 2px solid;
+  border-color: #27394a;
+  text-align: center; }
+
+#cycle_featured {
+  margin: 10px 22px 20px 22px;
+  padding: 0px; }
+
+#cycle_feature {
+  float: right;
+  color: #27394a;
+  width: 200px;
+  font-weight: bold; }
+
+#mission {
+  margin-left: 450px;
+  height: 250px;
+  width: 45%;
+  font-weight: bold; }
+
+#news {
+  clear: both;
+  height: 200px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: #27394a; }
+
+#tag {
+  float: left;
+  width: 50%;
+  height: 153px;
+  text-align: center;
+  border-right: 2px solid;
+  border-color: #27394a;
+  line-height: 2.0; }
+
+#open_house {
+  height: 130px;
+  width: 45%;
+  margin-left: 450px; }

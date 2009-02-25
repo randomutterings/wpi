@@ -83,6 +83,9 @@ label
 
 .margin_right
   :margin-right 10px
+  
+.margin_left
+  :margin-right 10px
 
 .margin
   :margin 10px
@@ -95,13 +98,12 @@ label
 
 .dropshadow_thumb
   :background url("../images/dropshadow.png") no-repeat bottom right
-  :width 78px
+  :width 90px
   :height 75px
   :float left
-  :margin-left 15px
   :margin-right 15px
   :margin-bottom 15px
-  :padding-right 20px
+  :padding-right 8px
   a
     img
       :position relative
@@ -180,12 +182,20 @@ th
   :margin-top 20px
 
 #header
-  :background-color = !secondary_color
 
 #agent
-  :float right
+  :background-image url(/images/logo.jpg)
+  :background-repeat no-repeat
+  :background-color = !secondary_color
+  :text-align right
+  :color = !primary_color
   :padding-top 10px
-  :padding-right 20px
+  :width 100%
+  :height 120px
+  :font
+    :weight bold
+  img
+    :margin 0px 20px 10px 10px
 
 #menu
   :padding 0px
@@ -207,47 +217,12 @@ th
 
 #main
   :background-color = !secondary_color
-  :padding 20px
+  :padding 30px
 
 #footer
+  :background-color = !primary_color
   :clear both
   
-#featured
-  :width 50%
-  :height 250px
-  :border-right 2px solid
-  :border-color = !primary_color
-  :text-align center
-
-#cycle_featured
-  :margin 10px 22px 20px 22px
-  :padding 0px
-  
-#mission
-  :float right
-  :width 50%
-  :font
-    :weight bold
-
-#news
-  :clear both
-  :height 200px
-  :border-top 2px solid
-  :border-bottom 2px solid
-  :border-color = !primary_color
-
-#tag
-  :width 50%
-  :height 130px
-  :text-align center
-  :border-right 2px solid
-  :border-color = !primary_color
-  :line-height 2.0
-
-#open_house
-  :float right
-  :width 50%
-
 #flash_notice,
 #flash_error
   :padding 5px 8px

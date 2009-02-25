@@ -16,7 +16,7 @@
       .dropshadow_large
         = image_tag(params[:photo] || @listing.photos.first.photo.url(:medium), :id => "medium_photo")
     - @listing.photos.each do |p|
-      .dropshadow_small.float_left.margin
+      .dropshadow_small.float_left
         = image_tag(p.photo.url(:small))
         
     %div.clear

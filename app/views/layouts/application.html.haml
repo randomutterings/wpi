@@ -15,31 +15,28 @@
       #container
         #header
           #agent
-            %div.border.float_right.small_agent
-              = image_tag(@agent.photo.url(:small))
-            %strong.float_left.align_right.padding_right.primary_color
-              =h @agent.first_name
-              =h @agent.last_name
+            = image_tag(@agent.photo.url(:small), :class => "border float_right") 
+            =h @agent.first_name
+            =h @agent.last_name
+            %br
+            =h @agent.address1
+            %br
+            - unless @agent.address2.blank?
+              =h @agent.address2
               %br
-              =h @agent.address1
-              %br
-              - unless @agent.address2.blank?
-                =h @agent.address2
-                %br
-              =h @agent.city
-              =h @agent.state
-              =h @agent.zip
-              %br
-              Phone:
-              =h @agent.phone
-              %br
-              Fax:
-              =h @agent.fax
-            - unless @agent.tollfree.blank?
-              %br
-                %strong Tollfree:
-                =h @agent.tollfree
-          =image_tag("/images/logo.jpg")
+            =h @agent.city
+            =h @agent.state
+            =h @agent.zip
+            %br
+            Phone:
+            =h @agent.phone
+            %br
+            Fax:
+            =h @agent.fax
+          - unless @agent.tollfree.blank?
+            %br
+              %strong Tollfree:
+              =h @agent.tollfree     
         
         #menu
           %div= link_to "Home", page_permalink_path("home")
@@ -61,3 +58,4 @@
           = yield
         
         #footer
+          &nbsp;

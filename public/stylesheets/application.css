@@ -75,6 +75,9 @@ a {
 .margin_right {
   margin-right: 10px; }
 
+.margin_left {
+  margin-right: 10px; }
+
 .margin {
   margin: 10px; }
 
@@ -86,13 +89,12 @@ a {
 
 .dropshadow_thumb {
   background: url("../images/dropshadow.png") no-repeat bottom right;
-  width: 78px;
+  width: 90px;
   height: 75px;
   float: left;
-  margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 15px;
-  padding-right: 20px; }
+  padding-right: 8px; }
   .dropshadow_thumb a img {
     position: relative;
     top: 0px;
@@ -168,13 +170,19 @@ th {
   border: solid 1px black;
   margin-top: 20px; }
 
-#header {
-  background-color: #ece2ad; }
 
 #agent {
-  float: right;
+  background-image: url(/images/logo.jpg);
+  background-repeat: no-repeat;
+  background-color: #ece2ad;
+  text-align: right;
+  color: #27394a;
   padding-top: 10px;
-  padding-right: 20px; }
+  width: 100%;
+  height: 120px;
+  font-weight: bold; }
+  #agent img {
+    margin: 0px 20px 10px 10px; }
 
 #menu {
   padding: 0px;
@@ -195,45 +203,11 @@ th {
 
 #main {
   background-color: #ece2ad;
-  padding: 20px; }
+  padding: 30px; }
 
 #footer {
+  background-color: #27394a;
   clear: both; }
-
-#featured {
-  width: 50%;
-  height: 250px;
-  border-right: 2px solid;
-  border-color: #27394a;
-  text-align: center; }
-
-#cycle_featured {
-  margin: 10px 22px 20px 22px;
-  padding: 0px; }
-
-#mission {
-  float: right;
-  width: 50%;
-  font-weight: bold; }
-
-#news {
-  clear: both;
-  height: 200px;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  border-color: #27394a; }
-
-#tag {
-  width: 50%;
-  height: 130px;
-  text-align: center;
-  border-right: 2px solid;
-  border-color: #27394a;
-  line-height: 2.0; }
-
-#open_house {
-  float: right;
-  width: 50%; }
 
 #flash_notice,
 #flash_error {

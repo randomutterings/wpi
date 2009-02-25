@@ -9,6 +9,7 @@ featured listings (flash houses with link to view all)
 news (flash news)
 showings and open houses on calendar
 whats your home worth (creates listing model with status inquired about value)
+make featured listings unobtrusive
 
 local listings (different site idx link)
 <iframe name="local_listings" src="http://framing.usamls.net/framing/default.asp?f_id=RW%5DWZWXXWZW%5DWR" height="2100" width="800" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>
