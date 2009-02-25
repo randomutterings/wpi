@@ -1,11 +1,11 @@
-!primary_color = #27394A
-!secondary_color = #ECE2AD
+@import defaults.sass
 
 body
   :background-color #FFFFFF
   :font
     :family Verdana, Helvetica, Arial
     :size 12px
+  :color = !primary_color
 
 .normal
   :font
@@ -202,6 +202,7 @@ th
 #nav
   :padding 0px
   :height 62px
+  :background-image url(/images/nav.png)
 
 #nav, #nav ul
   :padding 0
@@ -225,7 +226,6 @@ th
   :height 44px
   
 #nav li
-  :background-color = !primary_color
   :width 150px
   :text-align center
   :padding-left 18px
@@ -254,8 +254,13 @@ th
   :padding 30px
 
 #footer
+  :margin-top 2px
   :background-color = !primary_color
   :clear both
+  a
+    :color = !secondary_color
+    :font
+      :weight normal
   
 #flash_notice,
 #flash_error

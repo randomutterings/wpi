@@ -4,7 +4,7 @@
 #featured {
   float: left;
   width: 50%;
-  height: 250px;
+  height: 260px;
   border-right: 2px solid;
   border-color: #27394a;
   text-align: center; }
@@ -21,6 +21,8 @@
 
 #mission {
   margin-left: 450px;
+  padding-left: 40px;
+  padding-top: 10px;
   height: 250px;
   width: 45%;
   font-weight: bold; }
@@ -30,18 +32,23 @@
   height: 200px;
   border-top: 2px solid;
   border-bottom: 2px solid;
-  border-color: #27394a; }
+  border-color: #27394a;
+  font-size: 14px;
+  font-weight: bold; }
 
 #tag {
   float: left;
   width: 50%;
-  height: 153px;
+  height: 130px;
   text-align: center;
   border-right: 2px solid;
   border-color: #27394a;
-  line-height: 2.0; }
+  line-height: 2.0;
+  font-size: 14px;
+  font-weight: bold; }
 
 #open_house {
   height: 130px;
   width: 45%;
-  margin-left: 450px; }
+  margin-left: 450px;
+  text-align: center; }

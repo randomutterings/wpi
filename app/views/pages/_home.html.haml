@@ -4,29 +4,22 @@
 - javascript('home')
 
 #featured
-  %div.title.padding Featured Properties:
+  .title.padding Featured Properties:
   #cycle_featured
     = render :partial => 'featured', :collection => @featured
     .align_right
       = link_to "View all", listings_path(:featured => true)
   
 #mission
-  .padding.primary_color
-    ="At #{APP_CONFIG[:site_name]}, we have streamlined the real estate process and are able to pass significant savings on to our clients."
-    %br
-    %br
-    ="As your agent I am committed to creating an enjoyable, convenient and affordable home buying and selling experience by providing innovative internet solutions and excellent service"
-    %br
-    %br
-    ="Please feel free to browse my website and see why #{APP_CONFIG[:site_name]} is so unique.  We can assist throughout the entire transaction from your sale/purchase, mortgage, home warranty, closing, and insurance needs."
+  =simple_format(@agent.mission)
 
 #news
-  .title News goes here
+  News goes here
   
 #tag
-  .title.primary_color.padding Your home is one of the greatest negotiations of your life.  Mistakes can be extremely costly.  How good is the agent representing YOU at the negotiating table?
+  =simple_format(@agent.tag)
 
 #open_house
-  .center=image_tag "open_house.png"
+  =image_tag "open_house.png"
 
 .clear

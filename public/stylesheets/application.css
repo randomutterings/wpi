@@ -1,7 +1,8 @@
 body {
   background-color: #FFFFFF;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 12px; }
+  font-size: 12px;
+  color: #27394a; }
 
 .normal {
   font-family: Verdana, Helvetica, Arial;
@@ -175,7 +176,7 @@ th {
 #agent {
   background-image: url(/images/logo.jpg);
   background-repeat: no-repeat;
-  background-color: #ece2ad;
+  background-color: #f5eec9;
   text-align: right;
   color: #27394a;
   padding-top: 10px;
@@ -187,7 +188,8 @@ th {
 
 #nav {
   padding: 0px;
-  height: 62px; }
+  height: 62px;
+  background-image: url(/images/nav.png); }
 
 #nav, #nav ul {
   padding: 0;
@@ -202,7 +204,7 @@ th {
   color: #FFFFFF; }
 
 #nav a:hover {
-  color: #ece2ad; }
+  color: #f5eec9; }
 
 #nav li.top {
   border-right: 1px solid white;
@@ -210,7 +212,6 @@ th {
   height: 44px; }
 
 #nav li {
-  background-color: #27394a;
   width: 150px;
   text-align: center;
   padding-left: 18px;
@@ -235,12 +236,16 @@ th {
   left: -68px; }
 
 #main {
-  background-color: #ece2ad;
+  background-color: #f5eec9;
   padding: 30px; }
 
 #footer {
+  margin-top: 2px;
   background-color: #27394a;
   clear: both; }
+  #footer a {
+    color: #f5eec9;
+    font-weight: normal; }
 
 #flash_notice,
 #flash_error {

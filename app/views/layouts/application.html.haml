@@ -15,7 +15,7 @@
       #container
         #header
           #agent
-            = image_tag(@agent.photo.url(:small), :class => "border float_right") 
+            = link_to(image_tag(@agent.photo.url(:small), :class => "border float_right"), @agent)
             =h @agent.first_name
             =h @agent.last_name
             %br
@@ -40,17 +40,9 @@
         
         %ul#nav
           %li.top= link_to "Home", page_permalink_path("home")
-          %li.top= link_to "Listings", listings_url
+          %li.top= link_to "View Listings", listings_url
           %li.top
-            = link_to "Admin", leads_url
-            - if authenticated?
-              %ul
-                %li= link_to "Agents", agents_url
-                %li= link_to "Leads", leads_url
-                %li= link_to "Pages", pages_url
-                %li= link_to "Emails", emails_url          
-          %li.top
-            = link_to "Pages", "javascript:void(0);"
+            = link_to "Services", "javascript:void(0);"
             %ul
               - @pages = Page.all.each do |page|
                 %li=link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
@@ -61,4 +53,11 @@
           = yield
         
         #footer
-          &nbsp;
+          - if authenticated?
+            = link_to "Agents", agents_url
+            = link_to "Leads", leads_url
+            = link_to "Pages", pages_url
+            = link_to "Emails", emails_url
+          - else
+            = link_to "Admin", :action => params[:action], :login => true
+            
