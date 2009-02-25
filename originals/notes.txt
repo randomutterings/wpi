@@ -9,13 +9,17 @@ featured listings (flash houses with link to view all)
 news (flash news)
 showings and open houses on calendar
 whats your home worth (creates listing model with status inquired about value)
-make featured listings unobtrusive
 
-local listings (different site idx link)
-<iframe name="local_listings" src="http://framing.usamls.net/framing/default.asp?f_id=RW%5DWZWXXWZW%5DWR" height="2100" width="800" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>
 
-school info (different site)
-<iframe name="schools" src="http://nces.ed.gov/ccd/schoolsearch/" height="1000" width="800" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>
+#Create pages
+  Name: Local Listings
+  Permalink: local_listings
+  Content: <iframe name="local_listings" src="http://framing.usamls.net/framing/default.asp?f_id=RW%5DWZWXXWZW%5DWR" height="2100" width="800" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>
 
-eclassified (different site eclassified.net)
-<iframe name="eclassifieds" src="http://www.wpirealty.com/cgi-bin/classifieds/classifieds.pl?session_key=" height="1800" width="800" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>
+  Name: School Info
+  Permalink: school_info
+  Content: <iframe name="schools" src="http://nces.ed.gov/ccd/schoolsearch/" height="1000" width="800" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>
+
+  Name: eClassifieds
+  Permalink: eclassifieds
+  Content: <iframe name="eclassifieds" src="http://www.wpirealty.com/cgi-bin/classifieds/classifieds.pl?session_key=" height="1800" width="800" marginwidth="0" marginheight="0" border="0" frameborder="0"></iframe>

@@ -39,7 +39,15 @@
     &nbsp;
     - if params[:all] == "true"
       = link_to "Only show listings displayed to public", listings_path
+      &nbsp;
+      = link_to "Only show featured listings", listings_path(:featured => true)
+    - elsif params[:featured] == "true"
+      = link_to "Show All", listings_path(:all => true)
+      &nbsp;
+      = link_to "Only show listings displayed to public", listings_path
     - else
       = link_to "Show All", listings_path(:all => true)
+      &nbsp;
+      = link_to "Only show featured listings", listings_path(:featured => true)
 
 .clear

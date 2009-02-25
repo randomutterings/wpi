@@ -2,6 +2,8 @@ class ListingsController < ApplicationController
   def index
     if params[:all]
       @listings = Listing.all
+    elsif params[:featured]
+      @listings = Listing.find_all_by_featured(true)
     else
       @listings = Listing.find_all_by_display(true)
     end
