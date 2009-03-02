@@ -3,8 +3,8 @@ class Listing < ActiveRecord::Base
   belongs_to  :status
   has_many    :photos,
               :dependent => :destroy
-  before_save :create_status_from_name,
-              :default_primary_photo
+  before_save :create_status_from_name
+  after_save  :default_primary_photo
   
   accepts_nested_attributes_for :photos, 
                                 :allow_destroy => true,
@@ -14,7 +14,11 @@ class Listing < ActiveRecord::Base
   
   def default_primary_photo
     if primary_photo.nil?
-      self.photos.first.primary = true unless self.photos.empty?
+      logger.error "primary photo is nil"
+      unless self.photos.empty?
+        self.photos.first.primary = true
+        self.photos.first.save
+      end
     end
   end
   
