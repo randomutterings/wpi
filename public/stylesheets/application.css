@@ -179,7 +179,8 @@ th {
   margin: 0 auto;
   padding: 10px;
   border: solid 1px black;
-  margin-top: 20px; }
+  margin-top: 20px;
+  min-width: 920px; }
 
 
 #agent {
