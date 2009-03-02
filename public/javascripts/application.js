@@ -15,6 +15,8 @@ sfHover = function() {
 }
 if (window.attachEvent) window.attachEvent("onload", sfHover);
 
+
+// Setup tooltips for icons on listing.show
 Event.observe(window,"load",function() { 
   $$("#icons *").findAll(function(node){
     return node.getAttribute('alt');

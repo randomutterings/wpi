@@ -16,4 +16,8 @@
     , 
     =featured.state
 .dropshadow_small=link_to(image_tag(featured.primary_photo.photo.url(:small)), featured)
+.align_right
+  = link_to_function "Next", "propertyCycle.next(#{featured_counter + 1})"
+  &nbsp;
+  = link_to "View all", listings_path(:featured => true)
 ="</div>"

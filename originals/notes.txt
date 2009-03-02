@@ -1,6 +1,5 @@
 bugs
 -------------
-no primary photo on edit if you don't choose one , maybe on new also
 
 features
 -------------

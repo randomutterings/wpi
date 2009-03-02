@@ -7,8 +7,6 @@
   .title.padding Featured Properties:
   #cycle_featured
     = render :partial => 'featured', :collection => @featured
-    .align_right
-      = link_to "View all", listings_path(:featured => true)
   
 #mission
   =simple_format(@agent.mission)
