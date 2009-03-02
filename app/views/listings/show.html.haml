@@ -3,11 +3,11 @@
 - javascript("photo_viewer")
 
 #icons
-  =link_to(image_tag("icon_contact.jpg"), new_email_path(:email_type => "agent", :listing_id => @listing.id))
-  =link_to(image_tag("icon_tell_a_friend.jpg"), new_email_path(:email_type => "friend", :listing_id => @listing.id))
-  =link_to(image_tag("icon_view_map.jpg"), "http://maps.google.com/?q=#{@listing.address}+#{@listing.city}+#{@listing.state}+#{@listing.zip}", :target => "new")
-  =link_to(image_tag("icon_mortgage_calculator.jpg"), page_permalink_path("mortgage_calculator"), :target => "new")
-  =link_to(image_tag("icon_print.jpg"), listing_path(@listing, :print => true), :target => "new")
+  =link_to(image_tag("icon_contact.jpg", :alt => "Contact the agent about this property"), new_email_path(:email_type => "agent", :listing_id => @listing.id))
+  =link_to(image_tag("icon_tell_a_friend.jpg", :alt => "Tell a friend"), new_email_path(:email_type => "friend", :listing_id => @listing.id))
+  =link_to(image_tag("icon_view_map.jpg", :alt => "View Map"), "http://maps.google.com/?q=#{@listing.address}+#{@listing.city}+#{@listing.state}+#{@listing.zip}", :target => "new")
+  =link_to(image_tag("icon_mortgage_calculator.jpg", :alt => "Mortgage Calculator"), page_permalink_path("mortgage_calculator"), :target => "new")
+  =link_to(image_tag("icon_print.jpg", :alt => "Print"), listing_path(@listing, :print => true), :target => "new")
 
 - unless @listing.photos.empty?
   %div.photo_viewer.float_right

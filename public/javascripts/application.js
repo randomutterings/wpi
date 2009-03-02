@@ -15,3 +15,11 @@ sfHover = function() {
 }
 if (window.attachEvent) window.attachEvent("onload", sfHover);
 
+Event.observe(window,"load",function() { 
+  $$("#icons *").findAll(function(node){
+    return node.getAttribute('alt');
+   }).each(function(node){
+     new Tooltip(node,node.alt);
+     node.removeAttribute("alt");
+   });
+}); 
