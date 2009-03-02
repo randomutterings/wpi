@@ -230,7 +230,9 @@ th {
 
 #nav li ul {
   position: absolute;
-  left: -999em; }
+  left: -999em;
+  padding-bottom: 4px;
+  background-color: #27394a; }
 
 #nav li:hover ul {
   left: auto;
