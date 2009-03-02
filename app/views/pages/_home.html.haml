@@ -12,7 +12,8 @@
   =simple_format(@agent.mission)
 
 #news
-  News goes here
+  #cycle_news
+    = render :partial => 'news', :collection => @articles
   
 #tag
   =simple_format(@agent.tag)

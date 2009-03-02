@@ -1,0 +1,13 @@
+="<div id='article#{news_counter + 1}' style='background: url(#{news.background_image.url(:news)}) no-repeat right;height:200px' class='#{"hidden " if news_counter > 0}article'>"
+#cycle_article
+  =news.title
+  %br
+  =news.content
+.padding_left
+  = link_to "Read more", news
+  &nbsp;
+  - unless @articles.length < 2
+    = link_to_function "Next", "newsCycle.next(#{news_counter + 1})"
+    &nbsp;
+    = link_to "View all", listings_path(:news => true)
+="</div>"

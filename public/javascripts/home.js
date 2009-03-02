@@ -1,6 +1,6 @@
+// Cycles the featured properties on the home page
 var propertyCycle = {
 	change: function(hide, show){
-		// Cycles the featured properties on the home page
 		jQuery("#feature" + hide).fadeOut(200, function(){
 			if (hide == jQuery(".feature").length){
 				hide = 1;
@@ -36,3 +36,42 @@ var propertyCycle = {
 	}
 }
 jQuery(document).ready(propertyCycle.setup);
+
+// Cycles the news articles on the home page
+var newsCycle = {
+	change: function(hide, show){
+		jQuery("#article" + hide).fadeOut(200, function(){
+			if (hide == jQuery(".article").length){
+				hide = 1;
+			}else{
+				hide++;
+			}
+			jQuery("#article" + show).fadeIn(200, function(){
+				if (show == jQuery(".article").length) {
+					hide = show;
+					show = 1;
+				}else{
+					show++;
+				}
+				window.clearTimeout(newsCycle.timeoutID);
+				newsCycle.timeoutID = window.setTimeout(function(){ newsCycle.change(hide, show) }, 4000);
+			})
+		})
+	},
+
+	next: function(hide){
+		if (hide == jQuery(".article").length){
+			show = 1;
+		}else{
+			show = hide + 1;
+		}
+		newsCycle.change(hide, show);
+	},
+
+	setup: function(){
+		if (jQuery(".article").length > 1){
+			newsCycle.timeoutID = window.setTimeout(function(){ newsCycle.change(1, 2) }, 4000);
+		}
+	}
+}
+jQuery(document).ready(newsCycle.setup);

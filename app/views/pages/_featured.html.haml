@@ -1,7 +1,4 @@
-- if featured_counter == 0
-  ="<div id='feature#{featured_counter + 1}' class='feature'>"
-- else
-  ="<div id='feature#{featured_counter + 1}' class='hidden feature'>"
+="<div id='feature#{featured_counter + 1}' class='#{"hidden " if featured_counter > 0}feature'>"
 #cycle_feature
   =featured.title
   %br

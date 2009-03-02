@@ -1,0 +1,16 @@
+- form_for @article, :html => { :multipart => true } do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :content
+    %br
+    = f.text_area :content
+  %p
+    = f.label :background_image
+    %br
+    = f.file_field :background_image
+  %p
+    = f.submit "Submit"

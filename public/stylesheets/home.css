@@ -29,12 +29,17 @@
 
 #news {
   clear: both;
-  height: 200px;
   border-top: 2px solid;
   border-bottom: 2px solid;
   border-color: #27394a;
   font-size: 14px;
   font-weight: bold; }
+
+
+#cycle_article {
+  padding: 20px;
+  height: 122px;
+  width: 70%; }
 
 #tag {
   float: left;
