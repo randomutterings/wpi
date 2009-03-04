@@ -1,5 +1,5 @@
 class LeadReferralTypesController < ApplicationController
-  before_filter :authenticate
+  before_filter :admin_required
   def index
     @lead_referral_types = LeadReferralType.all
   end

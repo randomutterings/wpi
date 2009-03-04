@@ -27,10 +27,18 @@ module Authentication
     current_account
   end
   
-  def login_required
+  def login_required(admin = nil)
     unless logged_in?
       flash[:error] = "You must first log in or sign up before accessing this page."
       redirect_to login_url
     end
   end
+  
+  def admin_required
+    unless logged_in? && current_account.admin == true
+      flash[:error] = "Only administrators can access this page"
+      redirect_to root_url
+    end
+  end
+  
 end

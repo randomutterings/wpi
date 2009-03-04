@@ -3,7 +3,7 @@
   = @article.content
 
 
-- if authenticated?
+- if admin?
   %p
     = link_to "Edit", edit_article_path(@article)
     |

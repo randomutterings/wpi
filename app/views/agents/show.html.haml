@@ -35,7 +35,7 @@
 %div
   = render "emails/agent"
 
-- if authenticated?
+- if admin?
   %div
     = link_to "Edit", edit_agent_path(@agent)
     |

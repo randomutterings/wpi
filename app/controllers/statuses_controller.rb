@@ -1,5 +1,5 @@
 class StatusesController < ApplicationController
-  before_filter :authenticate
+  before_filter :admin_required
   def index
     @statuses = Status.all
   end

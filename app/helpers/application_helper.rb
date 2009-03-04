@@ -1,8 +1,8 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
-  def authenticated?
-    session[:is_authenticated] == true
+  def admin?
+    logged_in? && current_account.admin == true
   end
   
   def remove_link_unless_new_record(fields)

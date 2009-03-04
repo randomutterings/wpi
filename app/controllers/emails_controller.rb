@@ -1,5 +1,5 @@
 class EmailsController < ApplicationController
-  before_filter :authenticate, :only => [:index, :show, :destroy]
+  before_filter :admin_required, :only => [:index, :show, :destroy]
   
   def index
     @emails = Email.all
@@ -18,7 +18,7 @@ class EmailsController < ApplicationController
     @email = Email.new(params[:email])
     if @email.save
       flash[:notice] = "Successfully created email."
-      if authenticated?
+      if admin?
         redirect_to @email
       elsif session[:agent]
         redirect_to agent_path(session[:agent])

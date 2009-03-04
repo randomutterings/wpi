@@ -3,7 +3,7 @@
 - for page in @pages
   %div
     = link_to page.name, page.permalink
-    = link_to 'Edit', edit_page_path(page) if authenticated?
-    = link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete if authenticated?
+    = link_to 'Edit', edit_page_path(page) if admin?
+    = link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete if admin?
 
-%p= link_to "New Page", new_page_path if authenticated?
+%p= link_to "New Page", new_page_path if admin?

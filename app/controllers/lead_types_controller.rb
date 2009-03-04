@@ -1,5 +1,5 @@
 class LeadTypesController < ApplicationController
-  before_filter :authenticate
+  before_filter :admin_required
   def index
     @lead_types = LeadType.all
   end

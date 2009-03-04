@@ -65,12 +65,10 @@
           = yield
         
         #footer
-          - if authenticated?
+          - if admin?
             = link_to "Agents", agents_url
             = link_to "Leads", leads_url
             = link_to "Pages", pages_url
             = link_to "News", articles_url
             = link_to "Emails", emails_url
-          - else
-            = link_to "Admin", :action => params[:action], :admin_login => true
             

@@ -98,7 +98,7 @@
     %strong Features:
     =simple_format @listing.features
 
-- if authenticated?
+- if admin?
   %p
     = link_to "Edit", edit_listing_path(@listing)
     |

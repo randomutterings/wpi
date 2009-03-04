@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :admin_required, :except => [:index, :show]
   def index
     @pages = Page.all
   end

@@ -1,5 +1,5 @@
 class LeadsController < ApplicationController
-  before_filter :authenticate
+  before_filter :admin_required
   def index
     @leads = Lead.all
   end

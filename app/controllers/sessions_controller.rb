@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
   def new
+    if Account.all.empty?
+      flash[:notice] = "Please setup your administrator account now."
+      redirect_to signup_path
+    end
   end
   
   def create
