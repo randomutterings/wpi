@@ -261,8 +261,7 @@ th {
 
 #flash_notice,
 #flash_error {
-  padding: 5px 8px;
-  margin: 10px 0; }
+  padding: 5px 8px; }
 
 #flash_notice {
   background-color: #CFC;

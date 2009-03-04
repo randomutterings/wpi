@@ -6,14 +6,13 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   filter_parameter_logging :password
-  before_filter :authenticate, :except => [:index, :show]
   before_filter :authenticate_if_requested
   before_filter :set_agent
   
   private
   
   def authenticate_if_requested
-    if params[:login]
+    if params[:admin_login]
       authenticate
     end
   end

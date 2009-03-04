@@ -1,5 +1,5 @@
 class StatusesController < ApplicationController
-  before_filter :authenticate, :only => [:index, :show, :new, :create, :edit, :update, :destroy]
+  before_filter :authenticate
   def index
     @statuses = Status.all
   end

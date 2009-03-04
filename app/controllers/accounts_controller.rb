@@ -1,5 +1,4 @@
 class AccountsController < ApplicationController
-  before_filter :authenticate, :except => [:new, :create]
   def new
     @account = Account.new
   end

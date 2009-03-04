@@ -1,4 +1,5 @@
 class AgentsController < ApplicationController
+  before_filter :authenticate, :except => [:index, :show]
   def index
     @agents = Agent.all
   end

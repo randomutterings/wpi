@@ -1,4 +1,5 @@
 class ListingsController < ApplicationController
+  before_filter :authenticate, :except => [:index, :show]
   def index
     if params[:all]
       @listings = Listing.all

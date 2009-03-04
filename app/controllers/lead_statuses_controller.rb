@@ -1,5 +1,5 @@
 class LeadStatusesController < ApplicationController
-  before_filter :authenticate, :only => [:index, :show, :new, :create, :edit, :update, :destroy]
+  before_filter :authenticate
   def index
     @lead_statuses = LeadStatus.all
   end

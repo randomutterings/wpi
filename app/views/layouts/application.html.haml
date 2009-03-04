@@ -56,8 +56,8 @@
               = link_to "Log out", logout_path
             - else
               = link_to "log in", login_path
-            %ul
-              %li= link_to "Sign up", signup_path
+              %ul
+                %li= link_to "Sign up", signup_path
             
         #main
           - flash.each do |name, msg|
@@ -72,5 +72,5 @@
             = link_to "News", articles_url
             = link_to "Emails", emails_url
           - else
-            = link_to "Admin", :action => params[:action], :login => true
+            = link_to "Admin", :action => params[:action], :admin_login => true
             
