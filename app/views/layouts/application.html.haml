@@ -33,11 +33,16 @@
             %br
             Fax:
             =h @agent.fax
-          - unless @agent.tollfree.blank?
-            %br
-              %strong Tollfree:
-              =h @agent.tollfree     
-        
+            - unless @agent.tollfree.blank?
+              %br
+                %strong Tollfree:
+                =h @agent.tollfree
+            - if logged_in?
+              .float_left.padding_top.padding_left
+                Welcome
+                = current_account.username
+              
+                  
         %ul#nav
           %li.top= link_to "Home", page_permalink_path("home")
           %li.top= link_to "View Listings", listings_url
@@ -45,8 +50,15 @@
             = link_to "Services", "javascript:void(0);"
             %ul
               - @pages = Page.all.each do |page|
-                %li=link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
-          
+                %li= link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
+          %li.top
+            - if logged_in?
+              = link_to "Log out", logout_path
+            - else
+              = link_to "log in", login_path
+            %ul
+              %li= link_to "Sign up", signup_path
+            
         #main
           - flash.each do |name, msg|
             = content_tag :div, msg, :id => "flash_#{name}"

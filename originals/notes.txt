@@ -8,7 +8,7 @@ features
 #listings (show with contact, tell a friend, view map, mortgage calculator, print)
 #about the agent (description from agent model and contact form)
 #featured listings (cycle featured listings on home page with link to view all)
-news (cycle news on home page)
+#news (cycle news on home page)
 file manager with access permissions
 buying and selling (auto responder with attachments)
 find a home
