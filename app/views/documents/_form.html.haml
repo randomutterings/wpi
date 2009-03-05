@@ -1,0 +1,21 @@
+- form_for @document, :html => { :multipart => true } do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :content
+    %br
+    = f.file_field :content
+  - if admin?
+    %p
+      = f.label :accounts
+      %br
+      = f.collection_select(:account_ids, Account.no_admins, :id, :info, {}, :multiple => true )
+  %p
+    = f.submit "Submit"

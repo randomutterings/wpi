@@ -1,4 +1,7 @@
 class Account < ActiveRecord::Base
+  has_many :permissions
+  has_many :documents, :through => :permissions
+  
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :username, :full_name, :email, :password, :password_confirmation
   
@@ -32,5 +35,13 @@ class Account < ActiveRecord::Base
   
   def encrypt_password(pass)
     Digest::SHA1.hexdigest([pass, password_salt].join)
+  end
+  
+  def info
+    "#{self.full_name} #{self.email}"
+  end
+  
+  def self.no_admins
+    self.find_all_by_admin
   end
 end

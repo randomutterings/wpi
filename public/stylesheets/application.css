@@ -221,8 +221,11 @@ th {
   float: left;
   height: 44px; }
 
+#nav li.last {
+  border-style: none; }
+
 #nav li {
-  width: 150px;
+  width: 147px;
   text-align: center;
   padding-left: 18px;
   padding-right: 18px;

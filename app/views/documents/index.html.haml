@@ -1,0 +1,20 @@
+- title "Documents"
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Content Type
+    %th Viewable by
+  - for document in @documents
+    %tr
+      %td= h document.name
+      %td= h document.description
+      %td= document.content_content_type
+      %td= document.accounts_viewable
+      %td= link_to 'Download', document.content.url
+      %td= link_to 'Show', document
+      %td= link_to 'Edit', edit_document_path(document)
+      %td= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Document", new_document_path

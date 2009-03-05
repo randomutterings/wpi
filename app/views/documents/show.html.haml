@@ -1,0 +1,24 @@
+- title "Document"
+
+%p
+  %strong Name:
+  =h @document.name
+%p
+  %strong Description:
+  =h @document.description
+%p
+  %strong Content Type:
+  =h @document.content_content_type
+%p
+  %strong Viewable by
+  = @document.accounts_viewable
+="<embed src='#{@document.content.url}' width='850' height='600'>" if @document.content_content_type == "application/pdf"
+
+%p
+  = link_to "Download", @document.content.url
+  |
+  = link_to "Edit", edit_document_path(@document)
+  |
+  = link_to "Destroy", @document, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", documents_path

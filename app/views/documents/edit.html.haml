@@ -1,0 +1,8 @@
+- title "Edit Document"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Edit", edit_document_path(@document)
+  |
+  = link_to "View All", documents_path

@@ -58,6 +58,8 @@
               = link_to "log in", login_path
               %ul
                 %li= link_to "Sign up", signup_path
+          - if logged_in?
+            %li.top.last= link_to "File Manager", documents_url
             
         #main
           - flash.each do |name, msg|
