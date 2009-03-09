@@ -1,9 +1,5 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-
-  def admin?
-    logged_in? && current_account.admin == true
-  end
   
   def remove_link_unless_new_record(fields)
     unless fields.object.new_record?

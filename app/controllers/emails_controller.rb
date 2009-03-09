@@ -17,7 +17,7 @@ class EmailsController < ApplicationController
   def create
     @email = Email.new(params[:email])
     if @email.save
-      flash[:notice] = "Successfully created email."
+      flash[:notice] = "Thank you, Your email has been sent."
       if admin?
         redirect_to @email
       elsif session[:agent]

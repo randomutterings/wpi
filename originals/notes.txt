@@ -10,7 +10,7 @@ features
 #featured listings (cycle featured listings on home page with link to view all)
 #news (cycle news on home page)
 #file manager with access permissions
-buying and selling (auto responder with attachments)
+#buying and selling (auto responder with attachments)
 find a home
 showings and open houses on calendar
 whats your home worth (creates listing model with status inquired about value)

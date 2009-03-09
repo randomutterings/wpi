@@ -1,0 +1,19 @@
+.float_left.padding_right= image_tag "buyer_seller_guide.jpg"
+.title Buyer and Seller Report
+%p It's all <b>FREE! The Buyers & Sellers E-Books</b> contain the secrets of the PRO's on "How to get <b>$$GREAT DEALS$$</b> on real estate"
+%p GET IT NOW! It's easy. Enter your name and email address below and your <b>FREE BUYER & SELLERS E-BOOKS</b> will be emailed to you immediately!
+
+- form_for @email do |f|
+  = f.error_messages
+  = f.hidden_field :from, :value => Agent.find(session[:agent]).email_with_name
+  = f.hidden_field :email_type, :value => "report"
+  %p
+    = f.label :to_name, "Your Name"
+    %br
+    = f.text_field :to_name
+  %p
+    = f.label :to_email_address, "Your email address"
+    %br
+    = f.text_field :to_email_address
+  %p
+    = f.submit "IT'S FREE GET IT NOW!"

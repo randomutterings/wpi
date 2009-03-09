@@ -16,7 +16,7 @@
 #   before_filter :login_required, :except => [:index, :show]
 module Authentication
   def self.included(controller)
-    controller.send :helper_method, :current_account, :logged_in?
+    controller.send :helper_method, :current_account, :logged_in?, :admin?
   end
   
   def current_account
@@ -32,6 +32,10 @@ module Authentication
       flash[:error] = "You must first log in or sign up before accessing this page."
       redirect_to login_url
     end
+  end
+  
+  def admin?
+    logged_in? && current_account.admin == true
   end
   
   def admin_required
