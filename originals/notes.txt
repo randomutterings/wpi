@@ -11,9 +11,9 @@ features
 #news (cycle news on home page)
 #file manager with access permissions
 #buying and selling (auto responder with attachments)
+#whats your home worth (email to agent)
 find a home
 showings and open houses on calendar
-whats your home worth (creates listing model with status inquired about value)
 
 
 #Create pages

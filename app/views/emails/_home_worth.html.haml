@@ -1,0 +1,126 @@
+- form_for @email do |f|
+  = f.error_messages
+  = f.hidden_field :to, :value => Agent.find(session[:agent]).email_with_name
+  = f.hidden_field :email_type, :value => "home_worth"
+  %p
+    = f.label :from_name, "Your Name"
+    %br
+    = f.text_field :from_name
+  %p
+    = f.label :from_email_address, "Your email address"
+    %br
+    = f.text_field :from_email_address
+  %p
+    = f.label :your_phone_number
+    %br
+    = f.text_field :your_phone_number
+  %p
+    = f.label :best_time_to_call
+    %br
+    = f.text_field :best_time_to_call
+  %p
+    = f.label :address
+    %br
+    = f.text_field :address
+  %p
+    = f.label :city
+    %br
+    = f.text_field :city
+  %p
+    = f.label :state
+    %br
+    = f.text_field :state
+  %p
+    = f.label :zip
+    %br
+    = f.text_field :zip
+  %p
+    = f.label :resident_status
+    %br
+    = f.select(:resident_status, ["Primary Residence", "Secondary Residence", "Vacation Home", "Rental"], {:include_blank => true})
+  %p
+    = f.label :resident_relationship
+    %br
+    = f.select(:resident_relationship, ["Legal Owner", "Renter", "Landlord", "Property Manager", "Potential Buyer", "Other"], {:include_blank => true})
+  %p
+    = f.label :property_type
+    %br
+    = f.select(:property_type, ["Single Family Home", "Multiple Family Home", "Townhouse", "Condominium", "Manufactured Home", "Mobile Home"], {:include_blank => true})
+  %p
+    = f.label :condition
+    %br
+    = f.select(:condition, ["Excellent", "Good", "Fair", "Poor"], {:include_blank => true})
+  %p
+    = f.label :lot_size
+    %br
+    = f.select(:lot_size, ["City Lot", "1/2 Acre", "1 Acre", "2-5 Acres", "5-10 Acres", "10+ Acres", "Not Sure"], {:include_blank => true})
+  %p
+    = f.label :square_footage
+    %br
+    = f.text_field :square_footage
+  %p
+    = f.label :basement
+    %br
+    = f.select(:basement, ["Finished", "Partially Finished", "Unfinished", "None"], {:include_blank => true})
+  %p
+    = f.label :style, "Style Ex: Ranch, 2-Story, etc"
+    %br
+    = f.text_field :style
+  %p
+    = f.label :year_built
+    %br
+    = f.text_field :year_built
+  %p
+    = f.label :fireplace
+    %br
+    = f.text_field :fireplace
+  %p
+    = f.label :moving, "Will you be moving? Where to?"
+    %br
+    = f.text_field :moving
+  %p
+    = f.label :bedrooms
+    %br
+    = f.text_field :bedrooms
+  %p
+    = f.label :bathrooms
+    %br
+    = f.text_field :bathrooms
+  %p
+    = f.label :parking
+    %br
+    = f.select(:parking, ["Garage", "Carport", "On Street", "Off Street", "No Covered Parking"], {:include_blank => true})
+  %p
+    = f.label :parking_spaces
+    %br
+    = f.text_field :parking_spaces
+  %p
+    = f.label :listing_status
+    %br
+    = f.select(:listing_status, ["Not currently listed", "For sale by owner", "Listed with agent"], {:include_blank => true})
+  %p
+    = f.label :planning, "Planning to sell"
+    %br
+    = f.select(:planning, ["Right away", "Within 6 months", "Within 12 months", "Not selling"], {:include_blank => true})
+  %p
+    = f.label :heat_type
+    %br
+    = f.text_field :heat_type
+  %p
+    = f.label :ac_type
+    %br
+    = f.text_field :ac_type
+  %p
+    = f.label :neighborhood
+    %br
+    = f.text_field :neighborhood
+  %p
+    = f.label :pool
+    %br
+    = f.text_field :pool
+  %p
+    = f.label :comments
+    %br
+    = f.text_area :comments
+  %p
+    = f.submit "Submit"

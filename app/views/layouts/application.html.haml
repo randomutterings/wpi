@@ -50,6 +50,7 @@
             = link_to "Services", "javascript:void(0);"
             %ul
               %li= link_to "Buyer and Seller Report", new_email_path(:email_type => "report")
+              %li= link_to "What's your home worth?", new_email_path(:email_type => "home_worth")
               - @pages = Page.all.each do |page|
                 %li= link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
           %li.top
