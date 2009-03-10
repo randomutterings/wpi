@@ -1,9 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :documents
-
   map.signup 'signup', :controller => 'accounts', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
+  map.search 'search', :controller => 'listings', :action => 'index', :new_search => true
+  map.resources :documents
+  
   map.resources :sessions
 
   map.resources :accounts

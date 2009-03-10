@@ -51,6 +51,7 @@
             %ul
               %li= link_to "Buyer and Seller Report", new_email_path(:email_type => "report")
               %li= link_to "What's your home worth?", new_email_path(:email_type => "home_worth")
+              %li= link_to "File Manager", documents_url
               - @pages = Page.all.each do |page|
                 %li= link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
           %li.top
@@ -60,8 +61,7 @@
               = link_to "log in", login_path
               %ul
                 %li= link_to "Sign up", signup_path
-          - if logged_in?
-            %li.top.last= link_to "File Manager", documents_url
+          %li.top.last= link_to "Find a Home", search_path
             
         #main
           - flash.each do |name, msg|

@@ -1,7 +1,12 @@
 class ListingsController < ApplicationController
   before_filter :admin_required, :except => [:index, :show]
   def index
-    if params[:all]
+    if params[:new_search]
+      @listing = Listing.new
+      render :partial => 'search', :layout => 'application'
+    elsif params[:search]
+      @listings = Listing.search(params)
+    elsif params[:all]
       @listings = Listing.all
     elsif params[:featured]
       @listings = Listing.find_all_by_featured(true)
