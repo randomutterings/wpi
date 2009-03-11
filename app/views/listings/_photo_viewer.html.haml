@@ -1,0 +1,8 @@
+- unless photo_viewer.photos.empty?
+  %div.photo_viewer.float_right
+    %div
+      .dropshadow_large
+        = image_tag(params[:photo] || photo_viewer.photos.first.photo.url(:medium), :id => "medium_photo")
+    - photo_viewer.photos.each do |p|
+      .dropshadow_thumb.margin_bottom.inline
+        = link_to(image_tag(p.photo.url(:thumb), :class => "thumbnail"), {:photo => p.photo.url(:medium)}, {:class => "thumbnail"})

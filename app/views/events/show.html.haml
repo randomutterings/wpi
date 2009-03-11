@@ -1,0 +1,32 @@
+- title "Event"
+- javascript("jquery")
+- javascript("photo_viewer")
+
+.float_right= render(:partial => 'listings/photo_viewer', :object => @event.listing)
+= render :partial => 'listings/icons', :object => @event.listing
+
+%p
+  %strong Event:
+  =h @event.title
+%p
+  %strong Description:
+  =h @event.description
+%p
+  %strong Listing:
+  =h @event.listing.title
+  =link_to "(View Details)", @event.listing
+%p
+  %strong Date:
+  =h @event.day
+%p
+  %strong Time:
+  =h @event.time
+
+%p
+  = link_to "Edit", edit_event_path(@event)
+  |
+  = link_to "Destroy", @event, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", events_path
+  
+.clear

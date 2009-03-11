@@ -1,0 +1,6 @@
+#icons
+  =link_to(image_tag("icon_contact.jpg", :alt => "Contact the agent about this property"), new_email_path(:email_type => "agent", :listing_id => icons.id))
+  =link_to(image_tag("icon_tell_a_friend.jpg", :alt => "Tell a friend"), new_email_path(:email_type => "friend", :listing_id => icons.id))
+  =link_to(image_tag("icon_view_map.jpg", :alt => "View Map"), "http://maps.google.com/?q=#{icons.address}+#{icons.city}+#{icons.state}+#{icons.zip}", :target => "new")
+  =link_to(image_tag("icon_mortgage_calculator.jpg", :alt => "Mortgage Calculator"), page_permalink_path("mortgage_calculator"), :target => "new")
+  =link_to(image_tag("icon_print.jpg", :alt => "Print"), listing_path(icons, :print => true), :target => "new")

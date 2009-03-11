@@ -12,8 +12,8 @@ features
 #file manager with access permissions
 #buying and selling (auto responder with attachments)
 #whats your home worth (email to agent)
-find a home
-showings and open houses on calendar
+#find a home
+#showings and open houses on calendar
 
 
 #Create pages

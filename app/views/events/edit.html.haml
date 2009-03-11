@@ -1,0 +1,8 @@
+- title "Edit Event"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Edit", edit_event_path(@event)
+  |
+  = link_to "View All", events_path

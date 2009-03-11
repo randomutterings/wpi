@@ -239,7 +239,8 @@ th {
 
 #nav li:hover ul {
   left: auto;
-  margin-left: -18px; }
+  margin-left: -18px;
+  z-index: 100; }
 
 #nav li.sfhover ul {
   left: auto;

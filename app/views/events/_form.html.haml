@@ -1,0 +1,28 @@
+- form_for @event do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :display
+    %br
+    = f.check_box :display
+  %p
+    = f.label :listing_id
+    %br
+    = f.collection_select(:listing_id, Listing.all, :id, :title, {:selected => params[:listing_id].to_i})
+  %p
+    = f.label :day
+    %br
+    = f.date_select :day
+  %p
+    = f.label :time
+    %br
+    = f.text_field :time
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.submit "Submit"

@@ -1,0 +1,24 @@
+- title "Events"
+
+.float_right
+  = calendar(:year => @date.year, :month => @date.month, :first_day_of_week => 7, :previous_month_text => pre, :next_month_text => nex) do |d|
+    - render_calendar_cell(d)
+
+%table
+  %tr
+    %th Event
+    %th Listing
+    %th Date
+    %th Time
+  - for event in @events
+    %tr
+      %td= h event.title
+      %td= h event.listing.title
+      %td= h event.day
+      %td= h event.time
+      %td= link_to 'Details', event
+      %td= link_to 'Edit', edit_event_path(event) if admin?
+      %td= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete if admin?
+
+%p.clear
+  = link_to "New Event", new_event_path if admin?
