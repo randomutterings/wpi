@@ -171,7 +171,7 @@ th {
   padding-bottom: 10px; }
 
 #site {
-  width: 75%;
+  width: 920px;
   margin: 0 auto; }
 
 #container {
@@ -196,10 +196,14 @@ th {
   #agent img {
     margin: 0px 20px 10px 10px; }
 
+#nav_container {
+  background-image: url(/images/nav.png);
+  background-repeat: repeat-x; }
+
 #nav {
   padding: 0px;
   height: 62px;
-  background-image: url(/images/nav.png); }
+  width: 870px; }
 
 #nav, #nav ul {
   padding: 0;
@@ -227,8 +231,8 @@ th {
 #nav li {
   width: 147px;
   text-align: center;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 13px;
+  padding-right: 13px;
   padding-top: 18px; }
 
 #nav li ul {
@@ -239,17 +243,11 @@ th {
 
 #nav li:hover ul {
   left: auto;
-  margin-left: -18px;
-  z-index: 100; }
+  margin-left: -13px; }
 
 #nav li.sfhover ul {
-  left: auto;
-  margin-top: 4px; }
-
-#nav li.sfhover li {
-  margin-top: -2px;
-  position: relative;
-  left: -68px; }
+  margin-top: 4px;
+  left: auto; }
 
 #main {
   background-color: #f5eec9;
