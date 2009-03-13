@@ -1,7 +1,6 @@
 - title @article.title
-%div{:style => "background: url(#{@article.background_image.url(:news)}) no-repeat right;height:200px;"}
+%div{:style => "background: url(#{APP_CONFIG[:domain]}/images/#{@article.background_image}) no-repeat right;height:200px;padding-right:290px;"}
   = @article.content
-
 
 - if admin?
   %p

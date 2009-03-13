@@ -1,16 +1,20 @@
-- form_for @article, :html => { :multipart => true } do |f|
+- javascript('jquery')
+- javascript('news_photos')
+
+- form_for @article do |f|
   = f.error_messages
   %p
     = f.label :title
     %br
     = f.text_field :title
   %p
+    = f.label :background_image
+    %br
+    = f.select :background_image, @files = Dir.glob("public/images/jpegs_for_news/*").collect { |file| [file.gsub("public/images/", "")] }
+    .float_right= image_tag "jpegs_for_news/Agent_happy_people.jpg", :id => "article_photo"
+  %p
     = f.label :content
     %br
     = f.text_area :content
-  %p
-    = f.label :background_image
-    %br
-    = f.file_field :background_image
   %p
     = f.submit "Submit"
