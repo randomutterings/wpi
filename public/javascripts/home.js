@@ -54,7 +54,7 @@ var newsCycle = {
 					show++;
 				}
 				window.clearTimeout(newsCycle.timeoutID);
-				newsCycle.timeoutID = window.setTimeout(function(){ newsCycle.change(hide, show) }, 4000);
+				newsCycle.timeoutID = window.setTimeout(function(){ newsCycle.change(hide, show) }, 8000);
 			})
 		})
 	},
@@ -70,7 +70,7 @@ var newsCycle = {
 
 	setup: function(){
 		if (jQuery(".article").length > 1){
-			newsCycle.timeoutID = window.setTimeout(function(){ newsCycle.change(1, 2) }, 4000);
+			newsCycle.timeoutID = window.setTimeout(function(){ newsCycle.change(1, 2) }, 8000);
 		}
 	}
 }

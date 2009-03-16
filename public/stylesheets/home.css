@@ -4,10 +4,11 @@
 #featured {
   float: left;
   width: 50%;
-  height: 240px;
+  height: 270px;
   border-right: 2px solid;
   border-color: #27395d;
-  text-align: center; }
+  text-align: center;
+  padding-top: 8px; }
 
 #cycle_featured {
   margin: 10px 22px 0px 22px;
@@ -23,9 +24,10 @@
   margin-left: 450px;
   padding-left: 40px;
   padding-top: 10px;
-  height: 230px;
+  height: 260px;
   width: 45%;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 14px; }
 
 #news {
   clear: both;

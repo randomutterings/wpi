@@ -33,10 +33,6 @@
             %br
             Fax:
             =h @agent.fax
-            - if logged_in?
-              .float_left.padding_top.padding_left
-                Welcome
-                = current_account.username
 
         #nav_container{:align => "center"}
           %ul#nav
@@ -73,5 +69,5 @@
             = link_to "News", articles_url
             = link_to "Emails", emails_url
           &nbsp;
-      .center
-        WPI Dwyer & associates &copy; 2009
+      #company.center
+        WPI Dwyer & Associates &copy; 2009
