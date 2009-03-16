@@ -20,6 +20,6 @@
   =simple_format(@agent.tag)
 
 #open_house
-  =image_tag "open_house.png"
-
+  =link_to(image_tag("open_house.png"), new_email_path(:email_type => "open_house"))
+  
 .clear

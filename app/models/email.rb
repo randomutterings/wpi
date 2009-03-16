@@ -38,7 +38,9 @@ class Email < ActiveRecord::Base
   before_save :send_email
   
   def prepare_attributes
-    if self.email_type == "report"
+    if self.email_type == "open_house"
+      self.subject = "I would like to schedule an open house"
+    elsif self.email_type == "report"
       self.subject = "FREE Buyer and seller report"
       self.body = "Hello #{self.from_name}, We have received your Free Buyers & Sellers e-Book Request. You can view them by opening the attached PDF files."
       self.files = ["/public/reports/BuyerFreeReport.pdf", "/public/reports/SellersFreeReport.pdf"]

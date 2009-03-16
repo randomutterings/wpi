@@ -1,0 +1,26 @@
+- form_for @email do |f|
+  = f.error_messages
+  = f.hidden_field :to, :value => Agent.find(session[:agent]).email_with_name
+  = f.hidden_field :email_type, :value => "open_house"
+  %p
+    = f.label :from_name, "Your Name"
+    %br
+    = f.text_field :from_name
+  %p
+    = f.label :from_email_address, "Your email address"
+    %br
+    = f.text_field :from_email_address
+  %p
+    = f.label :your_phone_number
+    %br
+    = f.text_field :your_phone_number
+  %p
+    = f.label :best_time_to_call
+    %br
+    = f.text_field :best_time_to_call
+  %p{:style => "width:340px;"}
+    = f.label :body, "Tell us a little about your home and when you would like to schedule an open house."
+    %br
+    = f.text_area :body, :value => body_text
+  %p
+    = f.submit "Submit"
