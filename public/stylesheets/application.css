@@ -171,15 +171,17 @@ th {
   padding-bottom: 10px; }
 
 #site {
-  width: 920px;
-  margin: 0 auto; }
+  width: 940px;
+  margin: 0 auto;
+  border: 8px solid white; }
 
 #container {
   background-color: #27395d;
   margin: 0 auto;
-  padding: 10px;
-  margin-top: 20px;
-  min-width: 920px; }
+  padding: 0px;
+  min-width: 920px;
+  border: 8px solid;
+  border-color: #27395d; }
 
 
 #agent {
@@ -254,6 +256,8 @@ th {
   padding: 30px; }
 
 #footer {
+  width: 940px;
+  margin: 0 auto;
   margin-top: 2px;
   background-color: #27395d;
   clear: both; }

@@ -61,13 +61,13 @@
             = content_tag :div, msg, :id => "flash_#{name}"
           = yield
         
-        #footer
-          - if admin?
-            = link_to "Agents", agents_url
-            = link_to "Leads", leads_url
-            = link_to "Pages", pages_url
-            = link_to "News", articles_url
-            = link_to "Emails", emails_url
-          &nbsp;
-      #company.center
-        WPI Dwyer & Associates &copy; 2009
+    #footer
+      - if admin?
+        = link_to "Agents", agents_url
+        = link_to "Leads", leads_url
+        = link_to "Pages", pages_url
+        = link_to "News", articles_url
+        = link_to "Emails", emails_url
+      &nbsp;
+    #company.center
+      WPI Dwyer & Associates &copy; 2009
