@@ -15,7 +15,7 @@ var propertyCycle = {
 					show++;
 				}
 				window.clearTimeout(propertyCycle.timeoutID);
-				propertyCycle.timeoutID = window.setTimeout(function(){ propertyCycle.change(hide, show) }, 4000);
+				propertyCycle.timeoutID = window.setTimeout(function(){ propertyCycle.change(hide, show) }, 8000);
 			})
 		})
 	},
@@ -31,7 +31,7 @@ var propertyCycle = {
 
 	setup: function(){
 		if (jQuery(".feature").length > 1){
-			propertyCycle.timeoutID = window.setTimeout(function(){ propertyCycle.change(1, 2) }, 4000);
+			propertyCycle.timeoutID = window.setTimeout(function(){ propertyCycle.change(1, 2) }, 8000);
 		}
 	}
 }
