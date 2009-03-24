@@ -240,6 +240,7 @@ th {
 #nav li ul {
   position: absolute;
   left: -999em;
+  margin-top: 10px;
   padding-bottom: 4px;
   background-color: #27395d; }
 
@@ -247,9 +248,10 @@ th {
   left: auto;
   margin-left: -13px; }
 
-#nav li.sfhover ul {
+#nav li.sfhover div {
   margin-top: 4px;
-  left: auto; }
+  position: relative;
+  left: -73px; }
 
 #main {
   background-color: #f5eec9;

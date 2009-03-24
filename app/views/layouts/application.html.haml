@@ -41,20 +41,22 @@
             %li.top= link_to "Find a Home", search_path
             %li.top
               = link_to "Services", "javascript:void(0);"
-              %ul
-                %li= link_to "Events", events_url
-                %li= link_to "Buyer and Seller Report", new_email_path(:email_type => "report")
-                %li= link_to "What's your home worth?", new_email_path(:email_type => "home_worth")
-                %li= link_to "File Manager", documents_url
-                - @pages = Page.all.each do |page|
-                  %li= link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
+              %div
+                %ul
+                  %li= link_to "Events", events_url
+                  %li= link_to "Buyer and Seller Report", new_email_path(:email_type => "report")
+                  %li= link_to "What's your home worth?", new_email_path(:email_type => "home_worth")
+                  %li= link_to "File Manager", documents_url
+                  - @pages = Page.all.each do |page|
+                    %li= link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
             %li.top.last
               - if logged_in?
                 = link_to "Log out", logout_path
               - else
                 = link_to "log in", login_path
-                %ul
-                  %li= link_to "Sign up", signup_path
+                %div
+                  %ul
+                    %li= link_to "Sign up", signup_path
             
         #main
           - flash.each do |name, msg|
