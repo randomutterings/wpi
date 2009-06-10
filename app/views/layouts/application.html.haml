@@ -39,7 +39,7 @@
             %li.top= link_to "Home", page_permalink_path("home")
             %li.top= link_to "View Listings", listings_url
             %li.top= link_to "Find a Home", search_path
-            %li.top
+            %li.top.last
               = link_to "Services", "javascript:void(0);"
               %div
                 %ul
@@ -49,14 +49,6 @@
                   %li= link_to "File Manager", documents_url
                   - @pages = Page.all.each do |page|
                     %li= link_to page.name, page_permalink_path(page.permalink) unless page.permalink == "home"
-            %li.top.last
-              - if logged_in?
-                = link_to "Log out", logout_path
-              - else
-                = link_to "log in", login_path
-                %div
-                  %ul
-                    %li= link_to "Sign up", signup_path
             
         #main
           - flash.each do |name, msg|
@@ -70,6 +62,11 @@
         = link_to "Pages", pages_url
         = link_to "News", articles_url
         = link_to "Emails", emails_url
+      - if logged_in?
+        = link_to "Log out", logout_path
+      - else
+        = link_to "log in", login_path
+        = link_to "Sign up", signup_path
       &nbsp;
     #company.center
       WPI Dwyer & Associates &copy; 2009

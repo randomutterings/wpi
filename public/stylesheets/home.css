@@ -8,20 +8,21 @@
   border-right: 2px solid;
   border-color: #27395d;
   text-align: center;
-  padding-top: 8px; }
+  padding-top: 8px;
+  padding-right: 8px; }
 
 #cycle_featured {
-  margin: 10px 22px 0px 22px;
-  padding: 0px; }
+  padding: 0px;
+  padding-left: 20px; }
 
 #cycle_feature {
   float: right;
   color: #27395d;
-  width: 200px;
+  width: 170px;
   font-weight: bold; }
 
 #mission {
-  margin-left: 450px;
+  margin-left: 375px;
   padding-left: 40px;
   padding-top: 10px;
   height: 260px;
@@ -57,5 +58,5 @@
 #open_house {
   height: 130px;
   width: 45%;
-  margin-left: 450px;
+  margin-left: 395px;
   text-align: center; }

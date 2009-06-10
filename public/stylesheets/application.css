@@ -36,7 +36,7 @@ a {
 
 .tooltip {
   font-weight: bold;
-  color: #f5eec9;
+  color: #ffffff;
   background-color: #27395d;
   margin-left: 10px;
   margin-top: 4px;
@@ -171,15 +171,15 @@ th {
   padding-bottom: 10px; }
 
 #site {
-  width: 940px;
+  width: 793px;
   margin: 0 auto;
-  border: 8px solid white; }
+  border: 8px solid #f5eec9; }
 
 #container {
   background-color: #27395d;
   margin: 0 auto;
   padding: 0px;
-  min-width: 920px;
+  min-width: 773px;
   border: 8px solid;
   border-color: #27395d; }
 
@@ -187,7 +187,7 @@ th {
 #agent {
   background-image: url(/images/logo.jpg);
   background-repeat: no-repeat;
-  background-color: #f5eec9;
+  background-color: #ffffff;
   text-align: right;
   color: #27395d;
   width: 100%;
@@ -205,7 +205,7 @@ th {
 #nav {
   padding: 0px;
   height: 62px;
-  width: 870px; }
+  width: 723px; }
 
 #nav, #nav ul {
   padding: 0;
@@ -220,7 +220,7 @@ th {
   color: #FFFFFF; }
 
 #nav a:hover {
-  color: #f5eec9; }
+  color: #ffffff; }
 
 #nav li.top {
   border-right: 1px solid white;
@@ -254,21 +254,21 @@ th {
   left: -73px; }
 
 #main {
-  background-color: #f5eec9;
+  background-color: #ffffff;
   padding: 30px; }
 
 #footer {
-  width: 940px;
+  width: 793px;
   margin: 0 auto;
   margin-top: 2px;
   background-color: #27395d;
   clear: both; }
   #footer a {
-    color: #f5eec9;
+    color: #ffffff;
     font-weight: normal; }
 
 #company {
-  color: #f5eec9; }
+  color: #ffffff; }
 
 #flash_notice,
 #flash_error {
