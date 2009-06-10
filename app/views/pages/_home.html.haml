@@ -10,7 +10,8 @@
     = render :partial => 'featured', :collection => @featured
   
 #mission
-  =simple_format(@agent.mission)
+  #mission_text
+    =simple_format(@agent.mission)
 
 #news
   #cycle_news

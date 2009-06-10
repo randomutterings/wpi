@@ -251,7 +251,8 @@ th {
 #nav li.sfhover div {
   margin-top: 4px;
   position: relative;
-  left: -73px; }
+  left: -73px;
+  z-index: 100; }
 
 #main {
   background-color: #ffffff;

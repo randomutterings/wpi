@@ -23,12 +23,15 @@
 
 #mission {
   margin-left: 375px;
-  padding-left: 40px;
+  padding-left: 20px;
   padding-top: 10px;
   height: 260px;
-  width: 45%;
+  width: 43%;
   font-weight: bold;
   font-size: 14px; }
+
+#mission_text {
+  margin-left: 20px; }
 
 #news {
   clear: both;
