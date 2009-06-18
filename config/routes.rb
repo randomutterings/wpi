@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :flyers
+
   map.resources :events
 
   map.signup 'signup', :controller => 'accounts', :action => 'new'

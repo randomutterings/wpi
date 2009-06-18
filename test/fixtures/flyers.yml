@@ -1,0 +1,9 @@
+one:
+  photo_file_size: MyString
+  photo_content_type: MyString
+  photo_file_size: MyString
+
+two:
+  photo_file_size: MyString
+  photo_content_type: MyString
+  photo_file_size: MyString

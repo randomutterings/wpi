@@ -19,6 +19,8 @@
             =h @agent.first_name
             =h @agent.last_name
             %br
+            #biolink= link_to "Biography", @agent
+            %br
             =h @agent.address1
             %br
             - unless @agent.address2.blank?
@@ -33,7 +35,8 @@
             %br
             Fax:
             =h @agent.fax
-
+            %br
+            
         #nav_container{:align => "center"}
           %ul#nav
             %li.top= link_to "Home", page_permalink_path("home")
@@ -61,6 +64,7 @@
         = link_to "Leads", leads_url
         = link_to "Pages", pages_url
         = link_to "News", articles_url
+        = link_to "Flyers", flyers_url
         = link_to "Emails", emails_url
       - if logged_in?
         = link_to "Log out", logout_path

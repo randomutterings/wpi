@@ -1,0 +1,11 @@
+- title "Flyers"
+
+%table
+  - for flyer in @flyers
+    %tr
+      %td= image_tag(flyer.photo.url)
+      %td= link_to 'Show', flyer
+      %td= link_to 'Edit', edit_flyer_path(flyer)
+      %td= link_to 'Destroy', flyer, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Flyer", new_flyer_path

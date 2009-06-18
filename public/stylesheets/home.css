@@ -21,7 +21,7 @@
   width: 170px;
   font-weight: bold; }
 
-#mission {
+#flashy_buttons {
   margin-left: 375px;
   padding-left: 20px;
   padding-top: 10px;
@@ -29,9 +29,6 @@
   width: 43%;
   font-weight: bold;
   font-size: 14px; }
-
-#mission_text {
-  margin-left: 20px; }
 
 #news {
   clear: both;
@@ -58,7 +55,7 @@
   font-size: 14px;
   font-weight: bold; }
 
-#open_house {
+#flyers {
   height: 130px;
   width: 45%;
   margin-left: 395px;

@@ -1,0 +1,11 @@
+- title "Flyer"
+
+%p
+  = image_tag(@flyer.photo.url)
+
+%p
+  = link_to "Edit", edit_flyer_path(@flyer)
+  |
+  = link_to "Destroy", @flyer, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", flyers_path

@@ -9,6 +9,7 @@ class PagesController < ApplicationController
       if params[:permalink] == "home"
         @featured = Listing.find_all_by_featured(true)
         @articles = Article.all
+        @flyers = Flyer.all
         render :partial => "home", :layout => "application"
       elsif params[:permalink] == "mortgage_calculator"
         render :partial => "mortgage_calculator", :layout => "application"

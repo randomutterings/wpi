@@ -33,18 +33,22 @@ class Email < ActiveRecord::Base
                 :ac_type,
                 :neighborhood,
                 :pool,
-                :comments
+                :comments,
+                :return_mail
   before_validation :prepare_attributes
   before_save :send_email
   
   def prepare_attributes
+    self.return_mail = false
     if self.email_type == "open_house"
       self.subject = "I would like to schedule an open house"
+      self.return_mail = true
     elsif self.email_type == "report"
       self.subject = "FREE Buyer and seller report"
       self.body = "Hello #{self.from_name}, We have received your Free Buyers & Sellers e-Book Request. You can view them by opening the attached PDF files."
       self.files = ["/public/reports/BuyerFreeReport.pdf", "/public/reports/SellersFreeReport.pdf"]
     elsif self.email_type == "home_worth"
+      self.return_mail = true
       self.subject = "Requesting Home Worth"
       self.body = "#{self.from_name} wants to know the value of their home.  Below is the information they provided.\\n"
       self.body << "Address: #{self.address}\\n" unless self.address.blank?
@@ -82,5 +86,8 @@ class Email < ActiveRecord::Base
   
   def send_email
     Notifier.deliver_lead_email(self.from, self.to, self.subject, self.body, self.files)
+    if self.return_mail == true
+      Notifier.deliver_lead_email(self.to, self.from, self.subject, "Thank you for your inquiry, someone will be responding to your message soon.")
+    end
   end
 end

@@ -75,3 +75,42 @@ var newsCycle = {
 	}
 }
 jQuery(document).ready(newsCycle.setup);
+
+// Cycles the flyers on the home page
+var flyersCycle = {
+	change: function(hide, show){
+		jQuery("#flyer" + hide).fadeOut(200, function(){
+			if (hide == jQuery(".flyer").length){
+				hide = 1;
+			}else{
+				hide++;
+			}
+			jQuery("#flyer" + show).fadeIn(200, function(){
+				if (show == jQuery(".flyer").length) {
+					hide = show;
+					show = 1;
+				}else{
+					show++;
+				}
+				window.clearTimeout(flyersCycle.timeoutID);
+				flyersCycle.timeoutID = window.setTimeout(function(){ flyersCycle.change(hide, show) }, 8000);
+			})
+		})
+	},
+
+	next: function(hide){
+		if (hide == jQuery(".flyer").length){
+			show = 1;
+		}else{
+			show = hide + 1;
+		}
+		flyersCycle.change(hide, show);
+	},
+
+	setup: function(){
+		if (jQuery(".flyer").length > 1){
+			flyersCycle.timeoutID = window.setTimeout(function(){ flyersCycle.change(1, 2) }, 8000);
+		}
+	}
+}
+jQuery(document).ready(flyersCycle.setup);

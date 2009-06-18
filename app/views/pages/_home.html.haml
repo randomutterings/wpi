@@ -9,18 +9,18 @@
   #cycle_featured
     = render :partial => 'featured', :collection => @featured
   
-#mission
-  #mission_text
-    =simple_format(@agent.mission)
+#flashy_buttons
 
 #news
   #cycle_news
     = render :partial => 'news', :collection => @articles
   
 #tag
+  .title= @agent.tag_headline
   =simple_format(@agent.tag)
 
-#open_house
-  =link_to(image_tag("open_house.png"), new_email_path(:email_type => "open_house"))
+#flyers
+  #cycle_flyers
+    = render :partial => 'flyers', :collection => @flyers
   
 .clear
