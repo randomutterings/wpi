@@ -1,5 +1,11 @@
 - title @article.title
-%div{:style => "background: url(#{APP_CONFIG[:domain]}/images/#{@article.background_image}) no-repeat right;height:200px;padding-right:290px;"}
+
+.title
+  = @article.title
+
+%br
+
+%div
   = @article.content
 
 - if admin?
