@@ -2,7 +2,7 @@ body {
   background: url("../images/background.jpg");
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px;
-  color: #27395d; }
+  color: #1e2c5a; }
 
 .normal {
   font-family: Verdana, Helvetica, Arial;
@@ -10,10 +10,10 @@ body {
   font-style: normal; }
 
 .primary_color {
-  color: #27395d; }
+  color: #1e2c5a; }
 
 a {
-  color: #27395d;
+  color: #1e2c5a;
   font-weight: bold; }
   a img {
     border: none; }
@@ -41,7 +41,7 @@ a {
 .tooltip {
   font-weight: bold;
   color: #ffffff;
-  background-color: #27395d;
+  background-color: #1e2c5a;
   margin-left: 10px;
   margin-top: 4px;
   padding: 1px 2px 1px 2px;
@@ -160,7 +160,7 @@ a {
 .border {
   border-width: 5px;
   border-style: solid;
-  border-color: #27395d; }
+  border-color: #1e2c5a; }
 
 .small_agent {
   height: 90px; }
@@ -183,7 +183,7 @@ th {
   padding: 0px;
   min-width: 773px;
   border: 8px solid;
-  border-color: #27395d; }
+  border-color: #1e2c5a; }
 
 
 #agent {
@@ -273,7 +273,7 @@ th {
   width: 785px;
   margin: 0 auto;
   padding: 0px 0px 8px 8px;
-  background-color: #27395d;
+  background-color: #1e2c5a;
   clear: both; }
   #footer a {
     color: #ffffff;
