@@ -212,8 +212,7 @@ th {
   padding: 0px;
   margin: 0px;
   height: 52px;
-  width: 723px;
-  line-height: .8; }
+  width: 723px; }
 
 #nav, #nav ul {
   padding: 0;
@@ -233,7 +232,7 @@ th {
 #nav li.top {
   border-right: 1px solid white;
   float: left;
-  height: 34px; }
+  height: 44px; }
 
 #nav li.last {
   border-style: none; }
@@ -243,7 +242,7 @@ th {
   text-align: center;
   padding-left: 13px;
   padding-right: 13px;
-  padding-top: 18px; }
+  padding-top: 13px; }
 
 #nav li div {
   line-height: 1; }
