@@ -175,20 +175,20 @@ th {
   padding-bottom: 10px; }
 
 #site {
-  width: 793px;
+  width: 853px;
   margin: 0 auto; }
 
 #container {
   margin: 0 auto;
   padding: 0px;
-  min-width: 773px;
+  min-width: 833px;
   border: 8px solid;
   border-color: #1e2c5a; }
 
 
 #agent {
   background-image: url(/images/header.png);
-  background-position: 10% 0%;
+  background-position: -3% 0%;
   background-repeat: no-repeat;
   text-align: right;
   color: #ffffff;
@@ -206,13 +206,13 @@ th {
 
 #nav_container {
   background-image: url(/images/nav.png);
-  background-position: 10% 0%; }
+  background-position: 5% 0%; }
 
 #nav {
   padding: 0px;
   margin: 0px;
   height: 52px;
-  width: 723px; }
+  width: 100%; }
 
 #nav, #nav ul {
   padding: 0;
@@ -238,10 +238,10 @@ th {
   border-style: none; }
 
 #nav li {
-  width: 147px;
+  width: 162px;
   text-align: center;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding-left: 23px;
+  padding-right: 23px;
   padding-top: 13px; }
 
 #nav li div {
@@ -256,12 +256,12 @@ th {
 
 #nav li:hover ul {
   left: auto;
-  margin-left: -13px; }
+  margin-left: -23px; }
 
 #nav li.sfhover div {
-  margin-top: 4px;
+  margin-top: 2px;
   position: relative;
-  left: -73px;
+  left: -81px;
   z-index: 100; }
 
 #main {
@@ -269,7 +269,7 @@ th {
   padding: 30px; }
 
 #footer {
-  width: 785px;
+  width: 845px;
   margin: 0 auto;
   padding: 0px 0px 8px 8px;
   background-color: #1e2c5a;
