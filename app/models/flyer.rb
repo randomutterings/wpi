@@ -1,4 +1,4 @@
 class Flyer < ActiveRecord::Base
   has_attached_file :photo, 
-                    :styles => { :original => "200x400>" }
+                    :styles => { :original => "400x100>" }
 end
