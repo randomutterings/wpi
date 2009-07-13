@@ -28,7 +28,7 @@ a {
 .title {
   font-size: 14px;
   font-weight: bold;
-  color: orange; }
+  color: gold; }
 
 .instructions {
   font-size: 10px;
@@ -40,7 +40,7 @@ a {
 
 .tooltip {
   font-weight: bold;
-  color: #ffffff;
+  color: d9c7b1;
   background-color: #1e2c5a;
   margin-left: 10px;
   margin-top: 4px;
@@ -187,7 +187,7 @@ th {
 
 
 #agent {
-  background-image: url(/images/header.png);
+  background-image: url(/images/header.jpg);
   background-position: -3% 0%;
   background-repeat: no-repeat;
   text-align: right;
@@ -226,9 +226,6 @@ th {
   text-decoration: none;
   color: #FFFFFF; }
 
-#nav a:hover {
-  color: #ffffff; }
-
 #nav li.top {
   border-right: 1px solid white;
   float: left;
@@ -265,7 +262,7 @@ th {
   z-index: 100; }
 
 #main {
-  background-color: #ffffff;
+  background-color: d9c7b1;
   padding: 30px; }
 
 #footer {
@@ -278,8 +275,6 @@ th {
     color: #ffffff;
     font-weight: normal; }
 
-#company {
-  color: #ffffff; }
 
 #flash_notice,
 #flash_error {
