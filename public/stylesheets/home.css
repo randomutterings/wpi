@@ -46,17 +46,18 @@
   padding: 60px; }
 
 #tag {
+  padding-top: 10px;
   float: left;
   width: 416px;
   text-align: center;
   line-height: 2.0;
   font-size: 14px;
-  font-weight: bold; }
+  font-weight: bold;
+  border-right: 2px solid;
+  border-color: #1e2c5a; }
 
 #flyers {
-  border-left: 2px solid;
-  border-color: #1e2c5a;
-  padding-top: 1px;
-  width: 390px;
+  padding-top: 6px;
+  width: 420px;
   margin-left: 418px;
   text-align: center; }
