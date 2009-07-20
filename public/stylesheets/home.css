@@ -52,12 +52,12 @@
   text-align: center;
   line-height: 2.0;
   font-size: 14px;
-  font-weight: bold;
-  border-right: 2px solid;
-  border-color: #1e2c5a; }
+  font-weight: bold; }
 
 #flyers {
   padding-top: 6px;
-  width: 420px;
+  width: 410px;
   margin-left: 418px;
-  text-align: center; }
+  text-align: center;
+  border-left: 2px solid;
+  border-color: #1e2c5a; }
