@@ -38,19 +38,20 @@
   border-top: 2px solid;
   border-bottom: 2px solid;
   border-color: #1e2c5a;
-  font-size: 14px;
-  font-weight: bold; }
+  font-size: 14px; }
 
 
 #cycle_article {
-  padding: 60px; }
+  padding: 20px;
+  padding-left: 60px;
+  color: #ffffff; }
 
 #tag {
   padding-top: 10px;
   float: left;
   width: 416px;
   text-align: center;
-  line-height: 2.0;
+  line-height: 1.0;
   font-size: 14px;
   font-weight: bold; }
 
