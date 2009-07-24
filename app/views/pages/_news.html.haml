@@ -1,8 +1,7 @@
 ="<div id='article#{news_counter + 1}' style='background: url(#{news.background_image.url}) no-repeat right;height:146px;padding-right:290px;' class='#{"hidden " if news_counter > 0}article'>"
 #cycle_article
-  .yellow_title
+  #news_title
     =news.title
-  %br
   =news.content
 .padding_left.gold_links
   = link_to "Read more", news
