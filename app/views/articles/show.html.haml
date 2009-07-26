@@ -6,7 +6,7 @@
 %br
 
 %div
-  = @article.content
+  =simple_format(@article.content)
 
 - if admin?
   %p

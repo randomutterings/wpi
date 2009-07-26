@@ -2,7 +2,7 @@
 #cycle_article
   #news_title
     =news.title
-  =news.content
+  =news.content.slice(0..280)
 .padding_left.gold_links
   = link_to "Read more", news
   &nbsp;
