@@ -2,6 +2,8 @@
   = f.error_messages
   = f.hidden_field :to, :value => Agent.find(session[:agent]).email_with_name
   = f.hidden_field :email_type, :value => "home_worth"
+  .float_right.padding_right
+    =image_tag "whats_your_home_worth_big.jpg"
   %p
     = f.label :from_name, "Your Name"
     %br
