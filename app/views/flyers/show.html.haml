@@ -2,6 +2,8 @@
 
 %p
   = image_tag(@flyer.photo.url)
+  %br
+  = @flyer.url
 
 %p
   = link_to "Edit", edit_flyer_path(@flyer)

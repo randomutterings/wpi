@@ -105,7 +105,6 @@ a {
   border: 1px solid black; }
 
 .dropshadow_thumb {
-  background: url("../images/dropshadow.png") no-repeat bottom right;
   width: 90px;
   height: 75px;
   float: left;
@@ -119,7 +118,6 @@ a {
     margin: -5px; }
 
 .dropshadow_small {
-  background: url("../images/dropshadow.png") no-repeat bottom right;
   width: 165px;
   height: 126px;
   margin-right: 20px;
@@ -131,7 +129,6 @@ a {
     margin: -5px; }
 
 .dropshadow_large {
-  background: url("../images/dropshadow.png") no-repeat bottom right;
   width: 400px;
   height: 294px;
   margin-bottom: 20px; }
@@ -142,7 +139,6 @@ a {
     margin: -5px; }
 
 .dropshadow_agent {
-  background: url("../images/dropshadow.png") no-repeat bottom right;
   width: 200px;
   height: 144px;
   float: left;
