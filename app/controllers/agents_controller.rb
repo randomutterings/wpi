@@ -14,7 +14,7 @@ class AgentsController < ApplicationController
       end
     else
       session[:agent] = Agent.find_by_permalink(params[:permalink])
-      @agent = Agent.find_by_permalink!(params[:permalink])
+      redirect_to :controller => "pages", :action => "show", :permalink => "home"
     end
   end
   
