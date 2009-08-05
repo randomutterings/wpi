@@ -13,6 +13,7 @@ class AgentsController < ApplicationController
         @agent = Agent.find(params[:id])
       end
     else
+      session[:agent] = Agent.find_by_permalink(params[:permalink])
       @agent = Agent.find_by_permalink!(params[:permalink])
     end
   end
