@@ -36,7 +36,7 @@ class Email < ActiveRecord::Base
                 :comments,
                 :return_mail
   before_validation :prepare_attributes
-  before_save :send_email
+  after_save :send_email
   
   def prepare_attributes
     self.return_mail = false
@@ -78,7 +78,9 @@ class Email < ActiveRecord::Base
       self.body << "Pool: #{self.pool}\\n" unless self.pool.blank?
       self.body << "Comments: #{self.comments}\\n" unless self.comments.blank?
     end
-    self.from = "#{self.from_name} <#{self.from_email_address}>" if self.from.blank?
+    unless self.from_email_address.blank?
+      self.from = "#{self.from_name} <#{self.from_email_address}>" if self.from.blank?
+    end
     self.to = "#{self.to_name} <#{self.to_email_address}>" if self.to.blank?
     self.body << "  You can reach me at #{self.your_phone_number}." unless self.your_phone_number.blank?
     self.body << "  The best time to call is #{self.best_time_to_call}." unless self.best_time_to_call.blank?
