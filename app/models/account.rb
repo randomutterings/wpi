@@ -3,7 +3,7 @@ class Account < ActiveRecord::Base
   has_many :documents, :through => :permissions
   
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :username, :full_name, :email, :password, :password_confirmation
+  attr_accessible :username, :full_name, :email, :password, :password_confirmation, :admin
   
   attr_accessor :password
   before_create :prepare_password
@@ -43,5 +43,9 @@ class Account < ActiveRecord::Base
   
   def self.no_admins
     self.find_all_by_admin
+  end
+  
+  def self.admins
+    self.find_all_by_admin(true)
   end
 end
