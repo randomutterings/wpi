@@ -237,7 +237,9 @@ th {
   text-align: center;
   padding-left: 23px;
   padding-right: 23px;
-  padding-top: 13px; }
+  padding-top: 13px;
+  position: relative;
+  z-index: 100; }
 
 #nav li div {
   line-height: 1; }
