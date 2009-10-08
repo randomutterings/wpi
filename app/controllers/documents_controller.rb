@@ -15,6 +15,8 @@ class DocumentsController < ApplicationController
   def create
     @document = Document.new(params[:document])
     @document.accounts << Account.find(session[:account_id])
+    account = Account.find_by_username(Agent.find(session[:agent]).permalink)
+    @document.accounts << account unless account.nil?
     if @document.save
       flash[:notice] = "Successfully created document."
       redirect_to documents_url
