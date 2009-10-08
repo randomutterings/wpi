@@ -7,5 +7,5 @@ test:
 
 production:
   site_name: WPI Dwyer & Associates
-  domain: http://wpi.lanecobuilders.com
+  domain: http://agents.wpi-properties.com
   image_magick_path: /usr/local/bin

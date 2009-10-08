@@ -24,6 +24,9 @@
   %p
     %strong Bathrooms:
     =h @listing.bathrooms
+  %p
+    %strong Status:
+    =h @listing.status.name
 - unless @listing.description.blank?
   %p
     %strong Description:

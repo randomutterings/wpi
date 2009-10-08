@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def show
     if params[:permalink]
       if params[:permalink] == "home"
-        @featured = Listing.find_all_by_featured(true)
+        @featured = Listing.find(:all, :order=>"featured DESC")
         @articles = Article.all
         @flyers = Flyer.all
         render :partial => "home", :layout => "application"
