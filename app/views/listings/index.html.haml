@@ -11,7 +11,7 @@
         = link_to 'Schedule Event', new_event_path(:listing_id => listing)
         = link_to 'Edit', edit_listing_path(listing)
         = link_to 'Destroy', listing, :confirm => 'Are you sure?', :method => :delete
-    %table{:cellspacing => 5}
+    %table{:cellspacing => 5, :width => "75%"}
       %tr
         %td{:colspan => 2}= link_to listing.title, listing
       %tr
