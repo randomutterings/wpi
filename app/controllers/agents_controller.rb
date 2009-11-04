@@ -2,7 +2,11 @@ class AgentsController < ApplicationController
   before_filter [:login_required, :admin_or_agent_required], :except => [:index, :show]
   
   def admin_or_agent_required
-    Agent.find(params[:id]).permalink == Account.find(session[:account_id]).username || admin_required
+    if params[:id]
+      Agent.find(params[:id]).permalink == Account.find(session[:account_id]).username || admin_required
+    else
+      admin_required
+    end
   end
   
   def index
