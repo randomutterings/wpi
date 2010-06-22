@@ -14,7 +14,7 @@
     %tr
       %td
         = f.label :permalink
-        .instructions="(Optional) Listing permalinks replicate at #{APP_CONFIG[:domain]}/listing/:permalink.  For example if your permalink is beach_house, the url for this listing will be #{APP_CONFIG[:domain]}/listing/beach_house."
+        .instructions="(Optional) Listing permalinks replicate at #{APP_CONFIG[:domain]}/listings/link/:permalink.  For example if your permalink is beach_house, the url for this listing will be #{APP_CONFIG[:domain]}/listings/link/beach_house."
       %td= f.text_field :permalink
     %tr
       %td
